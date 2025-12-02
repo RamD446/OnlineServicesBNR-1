@@ -326,6 +326,13 @@
       margin-bottom: 0.45rem;
     }
 
+    .mobile-branch-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      flex: 1;
+    }
+
     .mobile-branch-name {
       display: flex;
       align-items: center;
@@ -338,6 +345,13 @@
     .mobile-branch-name i {
       font-size: 0.8rem;
       color: #667eea;
+    }
+
+    .mobile-branch-number {
+      font-size: 0.75rem;
+      color: #666;
+      font-weight: 500;
+      padding-left: 1.25rem;
     }
 
     .mobile-branch-actions {
@@ -536,13 +550,66 @@
       background-color: #f8f9fa;
       border: 1px solid #e9ecef;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem;
     }
+
+    .branch-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .branch-name {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #212529;
+    }
+
+    .direction-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #ffffff;
+      background: linear-gradient(135deg, #EA4335 0%, #DC3545 100%);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .direction-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(234, 67, 53, 0.4);
+    }
+
+    .branch-address {
+      margin-bottom: 0.5rem;
+      opacity: 0.7;
+      line-height: 1.5;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .branch-address i {
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+    }
+
+
 
     .branch-image {
       width: 100%;
-      height: 120px;
+      height: 140px;
       overflow: hidden;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px;
+      margin-bottom: 1rem;
     }
 
     .branch-image img {
@@ -551,38 +618,19 @@
       object-fit: cover;
     }
 
-    .branch-content {
-      padding: 1.5rem;
-    }
-
-    .branch-name {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-
-    .branch-address {
-      margin-bottom: 1.25rem;
-      opacity: 0.7;
-      line-height: 1.5;
-      font-size: 0.8rem;
-    }
-
-    .branch-contact-grid {
+    .branch-contact-row {
       display: flex;
-      flex-direction: row;
-      gap: 0.75rem;
+      gap: 1rem;
+      align-items: center;
       justify-content: center;
     }
 
     .contact-item {
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.85rem 0.6rem;
-      border-radius: 10px;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+      border-radius: 25px;
       background: #ffffff;
       border: 1px solid #e9ecef;
       cursor: pointer;
@@ -590,7 +638,6 @@
       color: inherit;
       transition: all 0.2s ease;
       flex: 1;
-      min-width: 0;
     }
 
     .contact-item:hover {
@@ -599,13 +646,13 @@
     }
 
     .contact-icon {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #ffffff;
       flex-shrink: 0;
     }
@@ -618,32 +665,24 @@
       background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
     }
 
-    .contact-icon.direction {
-      background: linear-gradient(135deg, #EA4335 0%, #DC3545 100%);
-    }
-
     .contact-info {
       display: flex;
       flex-direction: column;
       gap: 0.15rem;
-      align-items: center;
-      text-align: center;
     }
 
     .contact-label {
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 700;
-      line-height: 1.2;
       color: #495057;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     .contact-number {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #212529;
-      word-break: break-all;
     }
 
     /* Reviews Section */
@@ -913,6 +952,10 @@
         padding: 0.6rem 0.7rem;
       }
 
+      .mobile-branch-info {
+        gap: 0.2rem;
+      }
+
       .mobile-branch-name {
         font-size: 0.75rem;
         gap: 0.4rem;
@@ -920,6 +963,11 @@
 
       .mobile-branch-name i {
         font-size: 0.75rem;
+      }
+
+      .mobile-branch-number {
+        font-size: 0.7rem;
+        padding-left: 1.15rem;
       }
 
       .mobile-action-btn {
@@ -1001,27 +1049,43 @@
         gap: 1.5rem;
       }
 
-      .branch-image {
-        height: 100px;
-        margin-bottom: 0.75rem;
+      .branch-card {
+        padding: 1.25rem;
       }
 
-      .branch-content {
-        padding: 1.25rem;
+      .branch-header {
+        margin-bottom: 0.65rem;
       }
 
       .branch-name {
         font-size: 1.2rem;
       }
 
+      .direction-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+      }
+
       .branch-address {
-        font-size: 0.75rem;
-        margin-bottom: 1rem;
+        font-size: 0.78rem;
+        margin-bottom: 0.45rem;
+      }
+
+
+
+      .branch-image {
+        height: 120px;
+        margin-bottom: 0.85rem;
+      }
+
+      .branch-contact-row {
+        gap: 0.75rem;
       }
 
       .contact-item {
-        padding: 0.65rem;
-        gap: 0.65rem;
+        padding: 0.65rem 0.85rem;
+        gap: 0.55rem;
       }
 
       .contact-icon {
@@ -1031,11 +1095,11 @@
       }
 
       .contact-label {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
       }
 
       .contact-number {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
       }
 
       .review-card {
@@ -1127,6 +1191,10 @@
         padding: 0.55rem 0.6rem;
       }
 
+      .mobile-branch-info {
+        gap: 0.18rem;
+      }
+
       .mobile-branch-name {
         font-size: 0.72rem;
         gap: 0.35rem;
@@ -1134,6 +1202,11 @@
 
       .mobile-branch-name i {
         font-size: 0.72rem;
+      }
+
+      .mobile-branch-number {
+        font-size: 0.68rem;
+        padding-left: 1.05rem;
       }
 
       .mobile-action-btn {
@@ -1187,31 +1260,56 @@
        All Branches
       </div><!-- Lingampally Branch -->
       <div class="mobile-branch-item">
-       <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Lingampally
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Lingampally
+        </div>
+        <div class="mobile-branch-number">
+         9281457458
+        </div>
        </div>
        <div class="mobile-branch-actions"><a href="tel:9281457458" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
        </div>
       </div><!-- Miyapur Branch -->
       <div class="mobile-branch-item">
-       <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Miyapur
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Miyapur
+        </div>
+        <div class="mobile-branch-number">
+         9281457454
+        </div>
        </div>
        <div class="mobile-branch-actions"><a href="tel:9281457454" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
        </div>
       </div><!-- Kondapur Branch -->
       <div class="mobile-branch-item">
-       <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Kondapur
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Kondapur
+        </div>
+        <div class="mobile-branch-number">
+         9045745783
+        </div>
        </div>
        <div class="mobile-branch-actions"><a href="tel:9045745783" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
        </div>
       </div><!-- Patancheru Branch -->
       <div class="mobile-branch-item">
-       <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Patancheru
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Patancheru
+        </div>
+        <div class="mobile-branch-number">
+         9045745789
+        </div>
        </div>
        <div class="mobile-branch-actions"><a href="tel:9045745789" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
        </div>
       </div><!-- Majidbanda Branch -->
       <div class="mobile-branch-item">
-       <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Majidbanda
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name"><i class="bi bi-geo-alt-fill"></i> Majidbanda
+        </div>
+        <div class="mobile-branch-number">
+         9090848457
+        </div>
        </div>
        <div class="mobile-branch-actions"><a href="tel:9090848457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
        </div>
@@ -1292,203 +1390,153 @@
     <p class="section-subtitle">Find Your Nearest Branch - We're Here to Serve You</p>
     <div class="branches-grid">
      <div class="branch-card">
-      <div class="branch-content">
-       <h3 class="branch-name">Miyapur</h3>
-       <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> 2nd Lane, Indra Reddy Allwyn Colony, Miyapur Cross Road, Miyapur, Hyderabad - 500049</p>
-       <div class="branch-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&amp;h=400&amp;fit=crop" alt="Miyapur Branch">
-       </div>
-       <div class="branch-contact-grid"><a href="tel:9281457454" class="contact-item">
-         <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+      <div class="branch-header">
+       <h3 class="branch-name">Miyapur</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      </div>
+      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>2nd Lane, Indra Reddy Allwyn Colony, Miyapur Cross Road, Miyapur, Hyderabad - 500049</span></p>
+      <div class="branch-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&amp;h=400&amp;fit=crop" alt="Miyapur Branch">
+      </div>
+      <div class="branch-contact-row"><a href="tel:9281457454" class="contact-item">
+        <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          Call
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Call
-          </div>
-          <div class="contact-number">
-           9281457454
-          </div>
-         </div></a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+         <div class="contact-number">
+          9281457454
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           WhatsApp
-          </div>
-          <div class="contact-number">
-           9281457454
-          </div>
-         </div></a> <a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon direction"><i class="bi bi-geo-alt-fill"></i>
+        </div></a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          WhatsApp
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Direction
-          </div>
-          <div class="contact-number">
-           Get Maps
-          </div>
-         </div></a>
-       </div>
+         <div class="contact-number">
+          9281457454
+         </div>
+        </div></a>
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-content">
-       <h3 class="branch-name">Lingampally</h3>
-       <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> Opp. to Gulmohar Park Colony, Anand Nagar, Lingampally, Hyderabad - 500019</p>
-       <div class="branch-image"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&amp;h=400&amp;fit=crop" alt="Lingampally Branch">
-       </div>
-       <div class="branch-contact-grid"><a href="tel:9281457458" class="contact-item">
-         <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+      <div class="branch-header">
+       <h3 class="branch-name">Lingampally</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      </div>
+      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>Opp. to Gulmohar Park Colony, Anand Nagar, Lingampally, Hyderabad - 500019</span></p>
+      <div class="branch-image"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&amp;h=400&amp;fit=crop" alt="Lingampally Branch">
+      </div>
+      <div class="branch-contact-row"><a href="tel:9281457458" class="contact-item">
+        <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          Call
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Call
-          </div>
-          <div class="contact-number">
-           9281457458
-          </div>
-         </div></a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+         <div class="contact-number">
+          9281457458
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           WhatsApp
-          </div>
-          <div class="contact-number">
-           9281457458
-          </div>
-         </div></a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon direction"><i class="bi bi-geo-alt-fill"></i>
+        </div></a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          WhatsApp
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Direction
-          </div>
-          <div class="contact-number">
-           Get Maps
-          </div>
-         </div></a>
-       </div>
+         <div class="contact-number">
+          9281457458
+         </div>
+        </div></a>
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-content">
-       <h3 class="branch-name">Patancheru</h3>
-       <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> 921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</p>
-       <div class="branch-image"><img src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=800&amp;h=400&amp;fit=crop" alt="Patancheru Branch">
-       </div>
-       <div class="branch-contact-grid"><a href="tel:9045745789" class="contact-item">
-         <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+      <div class="branch-header">
+       <h3 class="branch-name">Patancheru</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=921-2+Shanthi+Nagar+Colony+Bajaj+Electronics+Patancheru+Sangareddy+502319" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      </div>
+      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</span></p>
+      <div class="branch-image"><img src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=800&amp;h=400&amp;fit=crop" alt="Patancheru Branch">
+      </div>
+      <div class="branch-contact-row"><a href="tel:9045745789" class="contact-item">
+        <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          Call
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Call
-          </div>
-          <div class="contact-number">
-           9045745789
-          </div>
-         </div></a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+         <div class="contact-number">
+          9045745789
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           WhatsApp
-          </div>
-          <div class="contact-number">
-           9045745789
-          </div>
-         </div></a> <a href="https://www.google.com/maps/search/?api=1&amp;query=921-2+Shanthi+Nagar+Colony+Bajaj+Electronics+Patancheru+Sangareddy+502319" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon direction"><i class="bi bi-geo-alt-fill"></i>
+        </div></a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          WhatsApp
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Direction
-          </div>
-          <div class="contact-number">
-           Get Maps
-          </div>
-         </div></a>
-       </div>
+         <div class="contact-number">
+          9045745789
+         </div>
+        </div></a>
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-content">
-       <h3 class="branch-name">Majidbanda</h3>
-       <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> 1-59/12/K, M.S.S Nilayam, Beside GHMC Community Hall Lane, Masjidbanda, Hyderabad - 500084</p>
-       <div class="branch-image"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&amp;h=400&amp;fit=crop" alt="Majidbanda Branch">
-       </div>
-       <div class="branch-contact-grid"><a href="tel:9090848457" class="contact-item">
-         <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+      <div class="branch-header">
+       <h3 class="branch-name">Majidbanda</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      </div>
+      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>1-59/12/K, M.S.S Nilayam, Beside GHMC Community Hall Lane, Masjidbanda, Hyderabad - 500084</span></p>
+      <div class="branch-image"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&amp;h=400&amp;fit=crop" alt="Majidbanda Branch">
+      </div>
+      <div class="branch-contact-row"><a href="tel:9090848457" class="contact-item">
+        <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          Call
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Call
-          </div>
-          <div class="contact-number">
-           9090848457
-          </div>
-         </div></a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+         <div class="contact-number">
+          9090848457
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           WhatsApp
-          </div>
-          <div class="contact-number">
-           9090848457
-          </div>
-         </div></a> <a href="https://www.google.com/maps/search/?api=1&amp;query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon direction"><i class="bi bi-geo-alt-fill"></i>
+        </div></a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          WhatsApp
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Direction
-          </div>
-          <div class="contact-number">
-           Get Maps
-          </div>
-         </div></a>
-       </div>
+         <div class="contact-number">
+          9090848457
+         </div>
+        </div></a>
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-content">
-       <h3 class="branch-name">Kondapur</h3>
-       <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> 4-1338/A, First Floor, Raja Rajeshwara Nagar, Kondapur, Hyderabad - 500084</p>
-       <div class="branch-image"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&amp;h=400&amp;fit=crop" alt="Kondapur Branch">
-       </div>
-       <div class="branch-contact-grid"><a href="tel:9045745783" class="contact-item">
-         <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+      <div class="branch-header">
+       <h3 class="branch-name">Kondapur</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      </div>
+      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>4-1338/A, First Floor, Raja Rajeshwara Nagar, Kondapur, Hyderabad - 500084</span></p>
+      <div class="branch-image"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&amp;h=400&amp;fit=crop" alt="Kondapur Branch">
+      </div>
+      <div class="branch-contact-row"><a href="tel:9045745783" class="contact-item">
+        <div class="contact-icon phone"><i class="bi bi-telephone-fill"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          Call
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Call
-          </div>
-          <div class="contact-number">
-           9045745783
-          </div>
-         </div></a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+         <div class="contact-number">
+          9045745783
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           WhatsApp
-          </div>
-          <div class="contact-number">
-           9045745783
-          </div>
-         </div></a> <a href="https://www.google.com/maps/search/?api=1&amp;query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="contact-item">
-         <div class="contact-icon direction"><i class="bi bi-geo-alt-fill"></i>
+        </div></a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="contact-item">
+        <div class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i>
+        </div>
+        <div class="contact-info">
+         <div class="contact-label">
+          WhatsApp
          </div>
-         <div class="contact-info">
-          <div class="contact-label">
-           Direction
-          </div>
-          <div class="contact-number">
-           Get Maps
-          </div>
-         </div></a>
-       </div>
+         <div class="contact-number">
+          9045745783
+         </div>
+        </div></a>
       </div>
      </div>
     </div>
@@ -1861,5 +1909,5 @@
     // Start rotation every 20 seconds
     setInterval(updateRotatingContact, 20000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a7971ef62237f62',t:'MTc2NDY2NDA0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a798240011d7f4e',t:'MTc2NDY2NDcxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
