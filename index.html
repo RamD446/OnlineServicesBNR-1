@@ -445,75 +445,7 @@
       font-weight: 600;
     }
 
-    .rotating-contact {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-      animation: fadeIn 0.5s ease;
-    }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .rotating-branch-name {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-align: center;
-      padding: 0.75rem 1.5rem;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 30px;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .rotating-buttons {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .rotating-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.85rem 1.5rem;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: 600;
-      font-size: 1.05rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .rotating-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-    }
-
-    .rotating-btn i {
-      font-size: 1.5rem;
-    }
-
-    .rotating-btn.location {
-      background: linear-gradient(135deg, #EA4335 0%, #DC3545 100%);
-    }
-
-    .rotating-btn.whatsapp {
-      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-    }
-
-    .rotating-btn.call {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
 
     /* Branches Section */
     .branches-section {
@@ -522,18 +454,43 @@
       background-color: #ffffff;
     }
 
+    .branches-header-container {
+      text-align: left;
+      margin-bottom: 3rem;
+      padding-left: 0;
+    }
+
+    .branches-header-content {
+      display: inline-block;
+      text-align: left;
+    }
+
     .section-title {
-      text-align: center;
       font-size: 2.5rem;
       font-weight: 800;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
+      text-align: left;
     }
 
     .section-subtitle {
-      text-align: center;
-      font-size: 1rem;
+      font-size: 0.95rem;
       opacity: 0.7;
-      margin-bottom: 2.5rem;
+      margin-bottom: 0;
+      text-align: left;
+    }
+
+    .services-badges {
+      display: none;
+    }
+
+    .service-badge {
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
     .branches-grid {
@@ -553,16 +510,20 @@
       padding: 1.5rem;
     }
 
-    .branch-header {
+    .branch-card-header {
+      margin-bottom: 1rem;
+    }
+
+    .branch-title-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
     .branch-name {
-      font-size: 1.4rem;
-      font-weight: 700;
+      font-size: 1.5rem;
+      font-weight: 800;
       color: #212529;
     }
 
@@ -579,6 +540,7 @@
       cursor: pointer;
       text-decoration: none;
       transition: all 0.2s ease;
+      flex-shrink: 0;
     }
 
     .direction-icon:hover {
@@ -586,19 +548,17 @@
       box-shadow: 0 4px 12px rgba(234, 67, 53, 0.4);
     }
 
-    .branch-address {
-      margin-bottom: 0.5rem;
-      opacity: 0.7;
-      line-height: 1.5;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
+    .branch-divider {
+      border: none;
+      border-top: 2px solid #dee2e6;
+      margin: 0 0 1rem 0;
     }
 
-    .branch-address i {
-      margin-top: 0.2rem;
-      flex-shrink: 0;
+    .branch-location {
+      font-size: 0.9rem;
+      color: #495057;
+      line-height: 1.6;
+      margin: 0;
     }
 
 
@@ -1007,40 +967,41 @@
         font-size: 0.85rem;
       }
 
-      .rotating-branch-name {
-        font-size: 1.15rem;
-        padding: 0.6rem 1.2rem;
-      }
 
-      .rotating-buttons {
-        gap: 0.75rem;
-        flex-direction: column;
-      }
-
-      .rotating-btn {
-        padding: 0.7rem 1.25rem;
-        font-size: 0.95rem;
-        width: 100%;
-        max-width: 280px;
-        justify-content: center;
-      }
-
-      .rotating-btn i {
-        font-size: 1.3rem;
-      }
 
       .branches-section,
       .reviews-section {
         padding: 3rem 4%;
       }
 
+      .branches-header-container {
+        text-align: left;
+        padding-left: 0;
+        margin-bottom: 2rem;
+      }
+
+      .branches-header-content {
+        text-align: left;
+      }
+
       .section-title {
         font-size: 1.75rem;
+        text-align: left;
       }
 
       .section-subtitle {
         font-size: 0.9rem;
-        margin-bottom: 2rem;
+        margin-bottom: 0;
+        text-align: left;
+      }
+
+      .services-badges {
+        display: none;
+      }
+
+      .service-badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.75rem;
       }
 
       .branches-grid,
@@ -1053,12 +1014,16 @@
         padding: 1.25rem;
       }
 
-      .branch-header {
-        margin-bottom: 0.65rem;
+      .branch-card-header {
+        margin-bottom: 0.85rem;
+      }
+
+      .branch-title-row {
+        margin-bottom: 0.85rem;
       }
 
       .branch-name {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
       }
 
       .direction-icon {
@@ -1067,9 +1032,12 @@
         font-size: 1.1rem;
       }
 
-      .branch-address {
-        font-size: 0.78rem;
-        margin-bottom: 0.45rem;
+      .branch-divider {
+        margin-bottom: 0.85rem;
+      }
+
+      .branch-location {
+        font-size: 0.82rem;
       }
 
 
@@ -1233,10 +1201,24 @@
 
       .section-title {
         font-size: 1.5rem;
+        text-align: left;
+      }
+
+      .section-subtitle {
+        text-align: left;
+      }
+
+      .service-badge {
+        font-size: 0.7rem;
+        padding: 0.35rem 0.65rem;
       }
 
       .branch-name {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
+      }
+
+      .branch-location {
+        font-size: 0.78rem;
       }
     }
   </style>
@@ -1377,23 +1359,24 @@
        </div>
       </div>
      </div>
-     <div class="rotating-contact" id="rotating-contact">
-      <div class="rotating-branch-name"><i class="bi bi-geo-alt-fill"></i> Lingampally Branch
-      </div>
-      <div class="rotating-buttons"><a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="rotating-btn whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="tel:9281457458" class="rotating-btn call" title="Call"> <i class="bi bi-telephone-fill"></i> </a>
-      </div>
-     </div>
     </div>
    </section><!-- Branches Section -->
    <section class="branches-section" id="branches">
-    <h2 class="section-title" id="branches-title">Our Branches</h2>
-    <p class="section-subtitle">Find Your Nearest Branch - We're Here to Serve You</p>
+    <div class="branches-header-container">
+     <div class="branches-header-content">
+      <h2 class="section-title" id="branches-title">Our Branches</h2>
+      <p class="section-subtitle">Fast, Trusted &amp; Secure Digital Financial Services</p>
+     </div>
+    </div>
     <div class="branches-grid">
      <div class="branch-card">
-      <div class="branch-header">
-       <h3 class="branch-name">Miyapur</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-card-header">
+       <div class="branch-title-row">
+        <h3 class="branch-name">Miyapur</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
+       <hr class="branch-divider">
+       <p class="branch-location">2nd Lane, Indra Reddy Allwyn Colony, Miyapur Cross Road, Miyapur, Hyderabad - 500049</p>
       </div>
-      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>2nd Lane, Indra Reddy Allwyn Colony, Miyapur Cross Road, Miyapur, Hyderabad - 500049</span></p>
       <div class="branch-image"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&amp;h=400&amp;fit=crop" alt="Miyapur Branch">
       </div>
       <div class="branch-contact-row"><a href="tel:9281457454" class="contact-item">
@@ -1420,10 +1403,13 @@
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-header">
-       <h3 class="branch-name">Lingampally</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-card-header">
+       <div class="branch-title-row">
+        <h3 class="branch-name">Lingampally</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
+       <hr class="branch-divider">
+       <p class="branch-location">Opp. to Gulmohar Park Colony, Anand Nagar, Lingampally, Hyderabad - 500019</p>
       </div>
-      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>Opp. to Gulmohar Park Colony, Anand Nagar, Lingampally, Hyderabad - 500019</span></p>
       <div class="branch-image"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&amp;h=400&amp;fit=crop" alt="Lingampally Branch">
       </div>
       <div class="branch-contact-row"><a href="tel:9281457458" class="contact-item">
@@ -1450,10 +1436,13 @@
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-header">
-       <h3 class="branch-name">Patancheru</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=921-2+Shanthi+Nagar+Colony+Bajaj+Electronics+Patancheru+Sangareddy+502319" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-card-header">
+       <div class="branch-title-row">
+        <h3 class="branch-name">Patancheru</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=921-2+Shanthi+Nagar+Colony+Bajaj+Electronics+Patancheru+Sangareddy+502319" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
+       <hr class="branch-divider">
+       <p class="branch-location">921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</p>
       </div>
-      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</span></p>
       <div class="branch-image"><img src="https://images.unsplash.com/photo-1460574283810-2aab119d8511?w=800&amp;h=400&amp;fit=crop" alt="Patancheru Branch">
       </div>
       <div class="branch-contact-row"><a href="tel:9045745789" class="contact-item">
@@ -1480,10 +1469,13 @@
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-header">
-       <h3 class="branch-name">Majidbanda</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-card-header">
+       <div class="branch-title-row">
+        <h3 class="branch-name">Majidbanda</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
+       <hr class="branch-divider">
+       <p class="branch-location">1-59/12/K, M.S.S Nilayam, Beside GHMC Community Hall Lane, Masjidbanda, Hyderabad - 500084</p>
       </div>
-      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>1-59/12/K, M.S.S Nilayam, Beside GHMC Community Hall Lane, Masjidbanda, Hyderabad - 500084</span></p>
       <div class="branch-image"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&amp;h=400&amp;fit=crop" alt="Majidbanda Branch">
       </div>
       <div class="branch-contact-row"><a href="tel:9090848457" class="contact-item">
@@ -1510,10 +1502,13 @@
       </div>
      </div>
      <div class="branch-card">
-      <div class="branch-header">
-       <h3 class="branch-name">Kondapur</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-card-header">
+       <div class="branch-title-row">
+        <h3 class="branch-name">Kondapur</h3><a href="https://www.google.com/maps/search/?api=1&amp;query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="direction-icon" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
+       <hr class="branch-divider">
+       <p class="branch-location">4-1338/A, First Floor, Raja Rajeshwara Nagar, Kondapur, Hyderabad - 500084</p>
       </div>
-      <p class="branch-address"><i class="bi bi-geo-alt-fill"></i> <span>4-1338/A, First Floor, Raja Rajeshwara Nagar, Kondapur, Hyderabad - 500084</span></p>
       <div class="branch-image"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&amp;h=400&amp;fit=crop" alt="Kondapur Branch">
       </div>
       <div class="branch-contact-row"><a href="tel:9045745783" class="contact-item">
@@ -1843,71 +1838,7 @@
       }, 500);
     }
 
-    // Branch Rotation Data
-    const branches = [
-      {
-        name: 'Lingampally Branch',
-        whatsapp: '919281457458',
-        phone: '9281457458',
-        mapUrl: 'https://www.google.com/maps/search/?api=1&query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019'
-      },
-      {
-        name: 'Miyapur Branch',
-        whatsapp: '919281457454',
-        phone: '9281457454',
-        mapUrl: 'https://www.google.com/maps/search/?api=1&query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049'
-      },
-      {
-        name: 'Kondapur Branch',
-        whatsapp: '919045745783',
-        phone: '9045745783',
-        mapUrl: 'https://www.google.com/maps/search/?api=1&query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084'
-      },
-      {
-        name: 'Patancheru Branch',
-        whatsapp: '919045745789',
-        phone: '9045745789',
-        mapUrl: 'https://www.google.com/maps/search/?api=1&query=921-2+Shanthi+Nagar+Colony+Bajaj+Electronics+Patancheru+Sangareddy+502319'
-      },
-      {
-        name: 'Majidbanda Branch',
-        whatsapp: '919090848457',
-        phone: '9090848457',
-        mapUrl: 'https://www.google.com/maps/search/?api=1&query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084'
-      }
-    ];
 
-    let currentBranchIndex = 0;
-
-    function updateRotatingContact() {
-      const branch = branches[currentBranchIndex];
-      const container = document.getElementById('rotating-contact');
-      
-      container.innerHTML = `
-        <div class="rotating-branch-name">
-          ${branch.name}
-        </div>
-        <div class="rotating-buttons">
-          <a href="${branch.mapUrl}" target="_blank" rel="noopener noreferrer" class="rotating-btn location" title="Get Directions">
-            <i class="bi bi-geo-alt-fill"></i>
-            <span>Location</span>
-          </a>
-          <a href="tel:${branch.phone}" class="rotating-btn call" title="Call">
-            <i class="bi bi-telephone-fill"></i>
-            <span>${branch.phone}</span>
-          </a>
-          <a href="https://wa.me/${branch.whatsapp}" target="_blank" rel="noopener noreferrer" class="rotating-btn whatsapp" title="WhatsApp">
-            <i class="bi bi-whatsapp"></i>
-            <span>WhatsApp</span>
-          </a>
-        </div>
-      `;
-      
-      currentBranchIndex = (currentBranchIndex + 1) % branches.length;
-    }
-
-    // Start rotation every 20 seconds
-    setInterval(updateRotatingContact, 20000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a798240011d7f4e',t:'MTc2NDY2NDcxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a79a24cd345a6f8',t:'MTc2NDY2NjAyOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
