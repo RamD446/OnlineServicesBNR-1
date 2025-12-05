@@ -306,14 +306,21 @@
       opacity: 0.95;
     }
 
-    /* Updated Services Grid - 3 Cards */
+    /* Updated Services Grid - 4 Cards */
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 0 auto 1rem;
       padding: 0 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
     }
 
     .service-card {
@@ -1019,11 +1026,7 @@
         margin-bottom: 1rem;
       }
 
-      .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 1rem;
-      }
+
 
       .service-circle {
         width: 140px;
@@ -1496,21 +1499,28 @@
         <div class="service-name">
          Credit Card Payments
         </div>
-       </div><button class="service-button" onclick="showServiceDetails('credit-card')">See More</button>
+       </div>
       </div>
       <div class="service-card">
        <div class="service-circle" onclick="showServiceDetails('money-transfer')"><span class="service-icon">🔄</span>
         <div class="service-name">
          Money Transfer
         </div>
-       </div><button class="service-button" onclick="showServiceDetails('money-transfer')">See More</button>
+       </div>
       </div>
       <div class="service-card">
        <div class="service-circle" onclick="showServiceDetails('cash-withdrawal')"><span class="service-icon">🏦</span>
         <div class="service-name">
          Cash Withdrawal
         </div>
-       </div><button class="service-button" onclick="showServiceDetails('cash-withdrawal')">See More</button>
+       </div>
+      </div>
+      <div class="service-card">
+       <div class="service-circle" onclick="showServiceDetails('instant-transactions')"><span class="service-icon">⚡</span>
+        <div class="service-name">
+         Instant Transactions
+        </div>
+       </div>
       </div>
      </div><a href="https://bnronlineservices457.com/Luckydraw.html" class="lucky-draw-button" id="lucky-draw-button"> <i class="bi bi-gift-fill"></i> <span id="lucky-draw-text">Monthly Lucky Draw - Participate Now!</span> <i class="bi bi-arrow-right-circle-fill"></i> </a>
     </div>
@@ -1645,7 +1655,7 @@
       <h3><i class="bi bi-headset"></i> Contact Us</h3><a href="tel:9281457454"><i class="bi bi-telephone-fill"></i> Miyapur: 9281457454</a> <a href="tel:9281457458"><i class="bi bi-telephone-fill"></i> Lingampally: 9281457458</a> <a href="tel:9045745789"><i class="bi bi-telephone-fill"></i> Patancheru: 9045745789</a> <a href="tel:9090848457"><i class="bi bi-telephone-fill"></i> Majidbanda: 9090848457</a>
      </div>
      <div class="footer-column">
-      <h3><i class="bi bi-shield-check"></i> Services</h3><a onclick="showServiceDetails('credit-card')"><i class="bi bi-credit-card-fill"></i> Credit Card Payments</a> <a onclick="showServiceDetails('money-transfer')"><i class="bi bi-arrow-left-right"></i> Money Transfer</a> <a onclick="showServiceDetails('cash-withdrawal')"><i class="bi bi-bank2"></i> Cash Withdrawal</a>
+      <h3><i class="bi bi-shield-check"></i> Services</h3><a onclick="showServiceDetails('credit-card')"><i class="bi bi-credit-card-fill"></i> Credit Card Payments</a> <a onclick="showServiceDetails('money-transfer')"><i class="bi bi-arrow-left-right"></i> Money Transfer</a> <a onclick="showServiceDetails('cash-withdrawal')"><i class="bi bi-bank2"></i> Cash Withdrawal</a> <a onclick="showServiceDetails('instant-transactions')"><i class="bi bi-lightning-charge-fill"></i> Instant Transactions</a>
      </div>
     </div>
     <div class="footer-bottom">
@@ -1749,6 +1759,21 @@
           'Safe and secure process',
           'All branches available',
           'Friendly staff assistance'
+        ]
+      },
+      'instant-transactions': {
+        icon: '<i class="bi bi-lightning-charge-fill" style="color: #ffffff; font-size: 3rem;"></i>',
+        title: 'Instant Transactions',
+        description: 'Lightning-fast instant transaction services for all your urgent financial needs. Complete transactions in seconds with our advanced processing system.',
+        features: [
+          'Real-time instant processing',
+          'Available 24/7/365',
+          'Zero waiting time',
+          'All major banks supported',
+          'Secure encrypted transactions',
+          'Instant confirmation SMS',
+          'No hidden charges',
+          'Quick and reliable service'
         ]
       }
     };
@@ -1975,5 +2000,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a90747f91166091',t:'MTc2NDkwNTMyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a90933860727f8b',t:'MTc2NDkwNjU4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
