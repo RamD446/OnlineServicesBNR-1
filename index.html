@@ -64,7 +64,7 @@
     /* Modern Compact Header */
     header {
       width: 100%;
-      padding: 0.5rem 5%;
+      padding: 0.35rem 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -79,15 +79,15 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
+      gap: 0.4rem;
+      font-size: 0.85rem;
       font-weight: 700;
       color: #ffffff;
     }
 
     .logo-image {
-      width: 38px;
-      height: 38px;
+      width: 32px;
+      height: 32px;
       border-radius: 6px;
       object-fit: cover;
       background: #ffffff;
@@ -436,6 +436,350 @@
       }
     }
 
+    /* Lucky Draw Modal */
+    .lucky-draw-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 3500;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .lucky-draw-modal.active {
+      display: flex;
+    }
+
+    .lucky-draw-content {
+      background: #ffffff;
+      border-radius: 12px;
+      max-width: 650px;
+      width: 90%;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      animation: modalSlideIn 0.3s ease;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .lucky-draw-header {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      position: relative;
+      border-bottom: 3px solid #FF8C00;
+    }
+
+    .lucky-draw-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #ffffff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .lucky-draw-close:hover {
+      background: rgba(0, 0, 0, 0.5);
+      transform: scale(1.1);
+    }
+
+    .lucky-draw-icon {
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+      animation: rotate 4s linear infinite;
+    }
+
+    .lucky-draw-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #000000;
+      margin: 0;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+
+    .lucky-draw-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #333333;
+      margin: 0.2rem 0 0;
+    }
+
+    .lucky-draw-body {
+      padding: 1.75rem 1.75rem;
+      max-height: 55vh;
+      overflow-y: auto;
+    }
+
+    .lucky-draw-announcement {
+      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border-left: 4px solid #2196F3;
+      text-align: center;
+    }
+
+    .lucky-draw-announcement h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1565C0;
+      margin: 0 0 0.5rem;
+    }
+
+    .lucky-draw-prizes {
+      background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      border: 2px solid #FFB74D;
+    }
+
+    .prize-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem;
+      margin-bottom: 0.4rem;
+      background: #ffffff;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: #E65100;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .prize-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .prize-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .prize-label i {
+      color: #FFD700;
+      font-size: 1.1rem;
+    }
+
+    .prize-amount {
+      font-size: 1rem;
+      color: #2E7D32;
+    }
+
+    .lucky-draw-terms {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .lucky-draw-terms h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #333333;
+      margin: 0 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .lucky-draw-terms h4 i {
+      color: #F44336;
+    }
+
+    .lucky-draw-terms ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .lucky-draw-terms li {
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #555555;
+      line-height: 1.5;
+      font-size: 0.85rem;
+    }
+
+    .lucky-draw-terms li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .lucky-draw-live {
+      background: linear-gradient(135deg, #e1bee7 0%, #ce93d8 100%);
+      padding: 0.85rem;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 1rem;
+      border: 2px solid #AB47BC;
+    }
+
+    .lucky-draw-live p {
+      margin: 0;
+      font-weight: 700;
+      color: #4A148C;
+      font-size: 0.9rem;
+    }
+
+    .lucky-draw-live a {
+      color: #6A1B9A;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .lucky-draw-branches {
+      background: #ffffff;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 2px solid #e0e0e0;
+    }
+
+    .lucky-draw-branches h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #333333;
+      margin: 0 0 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .lucky-draw-branches h4 i {
+      color: #2196F3;
+    }
+
+    .branch-contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.55rem 0.75rem;
+      margin-bottom: 0.4rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border-left: 3px solid #3498db;
+    }
+
+    .branch-contact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .branch-contact-name {
+      font-weight: 600;
+      color: #333333;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .branch-contact-name i {
+      color: #3498db;
+      font-size: 0.85rem;
+    }
+
+    .branch-contact-phone {
+      font-weight: 700;
+      color: #2196F3;
+      font-size: 0.85rem;
+    }
+
+    .lucky-draw-footer {
+      background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 100%);
+      padding: 1rem;
+      text-align: center;
+      border-top: 3px solid #66BB6A;
+    }
+
+    .lucky-draw-footer p {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1B5E20;
+    }
+
+    @media (max-width: 768px) {
+      .lucky-draw-content {
+        margin: 1rem auto;
+      }
+
+      .lucky-draw-header {
+        padding: 1.25rem;
+      }
+
+      .lucky-draw-icon {
+        font-size: 2.5rem;
+      }
+
+      .lucky-draw-title {
+        font-size: 1.5rem;
+      }
+
+      .lucky-draw-subtitle {
+        font-size: 1rem;
+      }
+
+      .lucky-draw-body {
+        padding: 1.5rem 1rem;
+      }
+
+      .lucky-draw-announcement h3 {
+        font-size: 1.1rem;
+      }
+
+      .prize-item {
+        font-size: 0.95rem;
+        padding: 0.65rem;
+      }
+
+      .prize-amount {
+        font-size: 1.05rem;
+      }
+
+      .lucky-draw-terms h4,
+      .lucky-draw-branches h4 {
+        font-size: 1rem;
+      }
+
+      .lucky-draw-terms li {
+        font-size: 0.9rem;
+      }
+
+      .branch-contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+
+      .branch-contact-phone {
+        font-size: 0.9rem;
+      }
+    }
+
     .modal-header {
       display: flex;
       align-items: center;
@@ -575,6 +919,157 @@
       }
       to {
         transform: rotate(360deg);
+      }
+    }
+
+    /* Employee Modal Styles */
+    .employee-section {
+      margin-bottom: 2rem;
+    }
+
+    .employee-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .employee-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 2px solid #3498db;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .employee-section-title::before {
+      content: "👥";
+      font-size: 1.2rem;
+    }
+
+    .employee-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.35rem;
+    }
+
+    .founder-grid {
+      grid-template-columns: 1fr;
+      max-width: 280px;
+      margin: 0 auto;
+    }
+
+    .employee-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 1.35rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 2px solid #e0e0e0;
+    }
+
+    .employee-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border-color: #3498db;
+    }
+
+    .employee-image {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 0.75rem;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .founder-grid .employee-image {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 0.85rem;
+    }
+
+    .employee-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .employee-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .employee-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+
+    .founder-grid .employee-name {
+      font-size: 1.35rem;
+    }
+
+    .employee-role {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      font-weight: 600;
+    }
+
+    .founder-grid .employee-role {
+      font-size: 1rem;
+      color: #3498db;
+    }
+
+    @media (max-width: 768px) {
+      .employee-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+      }
+
+      .employee-card {
+        padding: 0.75rem;
+      }
+
+      .employee-name {
+        font-size: 0.85rem;
+      }
+
+      .employee-role {
+        font-size: 0.75rem;
+      }
+
+      .founder-grid {
+        max-width: 200px;
+      }
+
+      .founder-grid .employee-image {
+        width: 120px;
+        height: 120px;
+      }
+
+      .founder-grid .employee-name {
+        font-size: 1.1rem;
+      }
+
+      .employee-section-title {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .employee-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .employee-section-title {
+        font-size: 0.9rem;
       }
     }
 
@@ -1397,6 +1892,237 @@
       <p class="modal-description" id="modal-description"></p>
      </div>
     </div>
+   </div><!-- Employee Modal -->
+   <div class="lucky-draw-modal" id="employee-modal">
+    <div class="lucky-draw-content">
+     <div class="lucky-draw-header"><button class="lucky-draw-close" onclick="closeEmployeeModal()" aria-label="Close">×</button>
+      <div class="lucky-draw-icon"><i class="bi bi-people-fill"></i>
+      </div>
+      <h2 class="lucky-draw-title">BNR Online Services</h2>
+      <p class="lucky-draw-subtitle">Our Employees</p>
+     </div>
+     <div class="lucky-draw-body"><!-- Founder Section -->
+      <div class="employee-section">
+       <h4 class="employee-section-title">Founder</h4>
+       <div class="employee-grid founder-grid">
+        <div class="employee-card">
+         <div class="employee-image"><img src="image1.png" alt="Ravi - Founder" onerror="this.src=''; this.alt='Ravi'; this.style.background='linear-gradient(135deg, #3498db 0%, #2c3e50 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='2rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Ravi
+          </div>
+          <div class="employee-role">
+           Founder
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Supervisors Section -->
+      <div class="employee-section">
+       <h4 class="employee-section-title">Supervisors</h4>
+       <div class="employee-grid">
+        <div class="employee-card">
+         <div class="employee-image"><img src="image1.png" alt="Ravi 1 - Supervisor" onerror="this.src=''; this.alt='R1'; this.style.background='linear-gradient(135deg, #3498db 0%, #2c3e50 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Ravi 1
+          </div>
+          <div class="employee-role">
+           Supervisor
+          </div>
+         </div>
+        </div>
+        <div class="employee-card">
+         <div class="employee-image"><img src="image2.png" alt="Ravi 2 - Supervisor" onerror="this.src=''; this.alt='R2'; this.style.background='linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Ravi 2
+          </div>
+          <div class="employee-role">
+           Supervisor
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Employees Section - Row 1 -->
+      <div class="employee-section">
+       <h4 class="employee-section-title">Team Members</h4>
+       <div class="employee-grid">
+        <div class="employee-card">
+         <div class="employee-image"><img src="employee1.png" alt="Rajesh Kumar" onerror="this.src=''; this.alt='RK'; this.style.background='linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Rajesh Kumar
+          </div>
+          <div class="employee-role">
+           Senior Associate
+          </div>
+         </div>
+        </div>
+        <div class="employee-card">
+         <div class="employee-image"><img src="employee2.png" alt="Priya Sharma" onerror="this.src=''; this.alt='PS'; this.style.background='linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Priya Sharma
+          </div>
+          <div class="employee-role">
+           Customer Support
+          </div>
+         </div>
+        </div>
+        <div class="employee-card">
+         <div class="employee-image"><img src="employee3.png" alt="Anil Reddy" onerror="this.src=''; this.alt='AR'; this.style.background='linear-gradient(135deg, #16a085 0%, #1abc9c 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Anil Reddy
+          </div>
+          <div class="employee-role">
+           Operations Manager
+          </div>
+         </div>
+        </div>
+       </div>
+      </div><!-- Employees Section - Row 2 -->
+      <div class="employee-section">
+       <div class="employee-grid">
+        <div class="employee-card">
+         <div class="employee-image"><img src="employee4.png" alt="Sanjay Patel" onerror="this.src=''; this.alt='SP'; this.style.background='linear-gradient(135deg, #f39c12 0%, #e67e22 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Sanjay Patel
+          </div>
+          <div class="employee-role">
+           Branch Manager
+          </div>
+         </div>
+        </div>
+        <div class="employee-card">
+         <div class="employee-image"><img src="employee5.png" alt="Meena Singh" onerror="this.src=''; this.alt='MS'; this.style.background='linear-gradient(135deg, #e91e63 0%, #c2185b 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Meena Singh
+          </div>
+          <div class="employee-role">
+           Financial Advisor
+          </div>
+         </div>
+        </div>
+        <div class="employee-card">
+         <div class="employee-image"><img src="employee6.png" alt="Vijay Krishna" onerror="this.src=''; this.alt='VK'; this.style.background='linear-gradient(135deg, #2ecc71 0%, #27ae60 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         </div>
+         <div class="employee-info">
+          <div class="employee-name">
+           Vijay Krishna
+          </div>
+          <div class="employee-role">
+           Technical Support
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div><!-- Lucky Draw Modal -->
+   <div class="lucky-draw-modal" id="lucky-draw-modal">
+    <div class="lucky-draw-content">
+     <div class="lucky-draw-header"><button class="lucky-draw-close" onclick="closeLuckyDrawModal()" aria-label="Close">×</button>
+      <div class="lucky-draw-icon"><i class="bi bi-gift-fill"></i>
+      </div>
+      <h2 class="lucky-draw-title">B.N.R ONLINE SERVICES</h2>
+      <p class="lucky-draw-subtitle">Dear All Customers</p>
+     </div>
+     <div class="lucky-draw-body">
+      <div class="lucky-draw-announcement">
+       <h3>Introducing Our First Ever Cashback Program!</h3>
+      </div>
+      <div class="lucky-draw-prizes">
+       <div class="prize-item">
+        <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>1st Winner</span>
+        </div>
+        <div class="prize-amount">
+         Rs. 7,000/-
+        </div>
+       </div>
+       <div class="prize-item">
+        <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>2nd Winner</span>
+        </div>
+        <div class="prize-amount">
+         Rs. 5,000/-
+        </div>
+       </div>
+       <div class="prize-item">
+        <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>3rd Winner</span>
+        </div>
+        <div class="prize-amount">
+         Rs. 4,000/-
+        </div>
+       </div>
+      </div>
+      <div class="lucky-draw-terms">
+       <h4><i class="bi bi-exclamation-circle-fill"></i> Terms &amp; Conditions</h4>
+       <ul>
+        <li>Program starts from 1st November 2025</li>
+        <li>Minimum total Transactions worth Rs. 1,00,000 between 1st - 31st required</li>
+        <li>Transactions above Rs. 5L = 2 entries</li>
+        <li>Transactions above Rs. 10L = 3 entries</li>
+        <li>Refer a friend = 1 extra for the referrer</li>
+       </ul>
+      </div>
+      <div class="lucky-draw-live">
+       <p>Lucky Draw will be LIVE on Instagram - <a href="https://www.instagram.com/teambnr457" target="_blank" rel="noopener noreferrer">@TEAMBNR457</a></p>
+      </div>
+      <div class="lucky-draw-branches">
+       <h4><i class="bi bi-telephone-fill"></i> Branch Contact Details</h4>
+       <div class="branch-contact-item">
+        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Miyapur</span>
+        </div>
+        <div class="branch-contact-phone">
+         9281 457 454
+        </div>
+       </div>
+       <div class="branch-contact-item">
+        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Lingampally</span>
+        </div>
+        <div class="branch-contact-phone">
+         9281 457 458
+        </div>
+       </div>
+       <div class="branch-contact-item">
+        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Patancheru</span>
+        </div>
+        <div class="branch-contact-phone">
+         90 457 457 89
+        </div>
+       </div>
+       <div class="branch-contact-item">
+        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Kondapur</span>
+        </div>
+        <div class="branch-contact-phone">
+         90 457 457 83
+        </div>
+       </div>
+       <div class="branch-contact-item">
+        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Masjid Banda</span>
+        </div>
+        <div class="branch-contact-phone">
+         9090 848 457
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="lucky-draw-footer">
+      <p>Thank you for being a part of the BNR Family</p>
+     </div>
+    </div>
    </div><!-- Mobile Overlay -->
    <div class="mobile-overlay" id="mobile-overlay" onclick="closeMobileMenu()"></div><!-- Mobile Navigation -->
    <nav class="mobile-nav" id="mobile-nav">
@@ -1522,7 +2248,7 @@
         </div>
        </div>
       </div>
-     </div><a href="https://bnronlineservices457.com/Luckydraw.html" class="lucky-draw-button" id="lucky-draw-button"> <i class="bi bi-gift-fill"></i> <span id="lucky-draw-text">Monthly Lucky Draw - Participate Now!</span> <i class="bi bi-arrow-right-circle-fill"></i> </a>
+     </div><button class="lucky-draw-button" id="lucky-draw-button" onclick="openLuckyDrawModal()"> <i class="bi bi-gift-fill"></i> <span id="lucky-draw-text">Monthly Lucky Draw - Participate Now!</span> <i class="bi bi-arrow-right-circle-fill"></i> </button>
     </div>
    </section><!-- Branches Section -->
    <section class="branches-section" id="branches">
@@ -1799,6 +2525,21 @@
       }
     });
 
+    function openLuckyDrawModal() {
+      document.getElementById('lucky-draw-modal').classList.add('active');
+    }
+
+    function closeLuckyDrawModal() {
+      document.getElementById('lucky-draw-modal').classList.remove('active');
+    }
+
+    // Close lucky draw modal when clicking outside
+    document.getElementById('lucky-draw-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeLuckyDrawModal();
+      }
+    });
+
 
 
     async function onConfigChange(config) {
@@ -1963,11 +2704,26 @@
       }
     }
 
-    // Navigate to Employees Page
+    // Navigate to Employees Page - Open Modal
     function navigateToEmployees() {
       closeMobileMenu();
-      window.open('https://bnronlineservices457.com/employees.html', '_blank', 'noopener,noreferrer');
+      openEmployeeModal();
     }
+
+    function openEmployeeModal() {
+      document.getElementById('employee-modal').classList.add('active');
+    }
+
+    function closeEmployeeModal() {
+      document.getElementById('employee-modal').classList.remove('active');
+    }
+
+    // Close employee modal when clicking outside
+    document.getElementById('employee-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeEmployeeModal();
+      }
+    });
 
     // Bootstrap Alert Function
     function showAlert(message, type = 'success') {
@@ -2000,5 +2756,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a90933860727f8b',t:'MTc2NDkwNjU4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a932efe21c13b7f',t:'MTc2NDkzMzkzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
