@@ -321,6 +321,14 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
       }
+      
+      .service-icon {
+        font-size: 3.5rem;
+      }
+      
+      .service-icon i {
+        font-size: 3.5rem;
+      }
     }
 
     .service-card {
@@ -356,14 +364,66 @@
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
     }
 
+    /* Individual Service Colors */
+    .service-card:nth-child(1) .service-circle {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+      border-color: #e74c3c;
+    }
+
+    .service-card:nth-child(1) .service-circle:hover {
+      background: linear-gradient(135deg, #ff6b6b 0%, #e74c3c 100%);
+      border-color: #ff6b6b;
+    }
+
+    .service-card:nth-child(2) .service-circle {
+      background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+      border-color: #f39c12;
+    }
+
+    .service-card:nth-child(2) .service-circle:hover {
+      background: linear-gradient(135deg, #ffb84d 0%, #f39c12 100%);
+      border-color: #ffb84d;
+    }
+
+    .service-card:nth-child(3) .service-circle {
+      background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+      border-color: #9b59b6;
+    }
+
+    .service-card:nth-child(3) .service-circle:hover {
+      background: linear-gradient(135deg, #b370cf 0%, #9b59b6 100%);
+      border-color: #b370cf;
+    }
+
+    .service-card:nth-child(4) .service-circle {
+      background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+      border-color: #27ae60;
+    }
+
+    .service-card:nth-child(4) .service-circle:hover {
+      background: linear-gradient(135deg, #52c979 0%, #27ae60 100%);
+      border-color: #52c979;
+    }
+
     .service-icon {
-      font-size: 3.5rem;
-      display: block;
+      font-size: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       line-height: 1;
+      color: #ffffff;
+      transition: all 0.3s ease;
     }
     
     .service-icon i {
-      font-size: 3.5rem;
+      font-size: 4rem;
+      color: #ffffff;
+      transition: all 0.3s ease;
+    }
+    
+    .service-circle:hover .service-icon,
+    .service-circle:hover .service-icon i {
+      transform: scale(1.15) rotate(360deg);
     }
 
     .service-name {
@@ -468,11 +528,21 @@
       margin: auto;
     }
 
+    .employee-modal-content {
+      max-width: 850px;
+      width: 92%;
+    }
+
     .lucky-draw-header {
       background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
       padding: 0.5rem 0.75rem;
       text-align: center;
       position: relative;
+      border-bottom: 2px solid #FF8C00;
+    }
+
+    .employee-modal-header {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
       border-bottom: 2px solid #FF8C00;
     }
 
@@ -514,6 +584,11 @@
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
     }
 
+    .employee-modal-title {
+      color: #000000;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+
     .lucky-draw-subtitle {
       font-size: 0.7rem;
       font-weight: 600;
@@ -521,10 +596,19 @@
       margin: 0.15rem 0 0;
     }
 
+    .employee-modal-subtitle {
+      color: #333333;
+    }
+
     .lucky-draw-body {
       padding: 1.75rem 1.75rem;
       max-height: 55vh;
       overflow-y: auto;
+    }
+
+    .employee-modal-body {
+      padding: 1.25rem 1rem;
+      max-height: 60vh;
     }
 
     .lucky-draw-announcement {
@@ -924,7 +1008,7 @@
 
     /* Employee Modal Styles */
     .employee-section {
-      margin-bottom: 2rem;
+      margin-bottom: 1.25rem;
     }
 
     .employee-section:last-child {
@@ -932,72 +1016,73 @@
     }
 
     .employee-section-title {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: #2c3e50;
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.65rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
       border-bottom: 2px solid #3498db;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .employee-section-title::before {
       content: "👥";
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .employee-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.35rem;
+      gap: 0.75rem;
     }
 
     .founder-grid {
       grid-template-columns: 1fr;
-      max-width: 280px;
+      max-width: 100%;
       margin: 0 auto;
     }
 
     .employee-card {
       background: #f8f9fa;
-      border-radius: 12px;
-      padding: 1.35rem;
+      border-radius: 10px;
+      padding: 0.9rem;
       text-align: center;
       transition: all 0.3s ease;
       border: 2px solid #e0e0e0;
     }
 
     .employee-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
       border-color: #3498db;
     }
 
     .employee-image {
-      width: 90px;
-      height: 90px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.65rem;
+    }
+
+    .employee-avatar {
+      width: 65px;
+      height: 65px;
       border-radius: 50%;
-      overflow: hidden;
-      margin: 0 auto 0.75rem;
-      background: #e0e0e0;
+      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #ffffff;
+      box-shadow: 0 3px 12px rgba(52, 152, 219, 0.3);
     }
 
-    .founder-grid .employee-image {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 0.85rem;
-    }
-
-    .employee-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .founder-grid .employee-avatar {
+      width: 85px;
+      height: 85px;
+      font-size: 1.8rem;
     }
 
     .employee-info {
@@ -1007,65 +1092,65 @@
     }
 
     .employee-name {
-      font-size: 1.05rem;
+      font-size: 0.9rem;
       font-weight: 700;
       color: #2c3e50;
     }
 
     .founder-grid .employee-name {
-      font-size: 1.35rem;
-    }
-
-    .employee-role {
-      font-size: 0.9rem;
-      color: #7f8c8d;
-      font-weight: 600;
-    }
-
-    .founder-grid .employee-role {
-      font-size: 1rem;
-      color: #3498db;
+      font-size: 1.15rem;
     }
 
     @media (max-width: 768px) {
       .employee-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
       }
 
       .employee-card {
-        padding: 0.75rem;
+        padding: 0.7rem;
       }
 
-      .employee-name {
-        font-size: 0.85rem;
-      }
-
-      .employee-role {
-        font-size: 0.75rem;
-      }
-
-      .founder-grid {
-        max-width: 200px;
-      }
-
-      .founder-grid .employee-image {
-        width: 120px;
-        height: 120px;
-      }
-
-      .founder-grid .employee-name {
+      .employee-avatar {
+        width: 55px;
+        height: 55px;
         font-size: 1.1rem;
       }
 
+      .founder-grid .employee-avatar {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+      }
+
+      .employee-image {
+        margin-bottom: 0.5rem;
+      }
+
+      .employee-name {
+        font-size: 0.8rem;
+      }
+
+      .founder-grid {
+        max-width: 100%;
+      }
+
+      .founder-grid .employee-name {
+        font-size: 1rem;
+      }
+
       .employee-section-title {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+      }
+
+      .employee-modal-body {
+        padding: 1rem 0.85rem;
       }
     }
 
     @media (max-width: 480px) {
       .employee-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .employee-section-title {
@@ -1894,26 +1979,26 @@
     </div>
    </div><!-- Employee Modal -->
    <div class="lucky-draw-modal" id="employee-modal">
-    <div class="lucky-draw-content">
-     <div class="lucky-draw-header"><button class="lucky-draw-close" onclick="closeEmployeeModal()" aria-label="Close">×</button>
+    <div class="lucky-draw-content employee-modal-content">
+     <div class="lucky-draw-header employee-modal-header"><button class="lucky-draw-close" onclick="closeEmployeeModal()" aria-label="Close">×</button>
       <div class="lucky-draw-icon"><i class="bi bi-people-fill"></i>
       </div>
-      <h2 class="lucky-draw-title">BNR Online Services</h2>
-      <p class="lucky-draw-subtitle">Our Employees</p>
+      <h2 class="lucky-draw-title employee-modal-title">BNR Online Services</h2>
+      <p class="lucky-draw-subtitle employee-modal-subtitle">Our Employees</p>
      </div>
-     <div class="lucky-draw-body"><!-- Founder Section -->
+     <div class="lucky-draw-body employee-modal-body"><!-- Founder Section -->
       <div class="employee-section">
        <h4 class="employee-section-title">Founder</h4>
        <div class="employee-grid founder-grid">
         <div class="employee-card">
-         <div class="employee-image"><img src="image1.png" alt="Ravi - Founder" onerror="this.src=''; this.alt='Ravi'; this.style.background='linear-gradient(135deg, #3498db 0%, #2c3e50 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='2rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           R
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Ravi
-          </div>
-          <div class="employee-role">
-           Founder
           </div>
          </div>
         </div>
@@ -1923,26 +2008,26 @@
        <h4 class="employee-section-title">Supervisors</h4>
        <div class="employee-grid">
         <div class="employee-card">
-         <div class="employee-image"><img src="image1.png" alt="Ravi 1 - Supervisor" onerror="this.src=''; this.alt='R1'; this.style.background='linear-gradient(135deg, #3498db 0%, #2c3e50 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           R1
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Ravi 1
           </div>
-          <div class="employee-role">
-           Supervisor
-          </div>
          </div>
         </div>
         <div class="employee-card">
-         <div class="employee-image"><img src="image2.png" alt="Ravi 2 - Supervisor" onerror="this.src=''; this.alt='R2'; this.style.background='linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           R2
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Ravi 2
-          </div>
-          <div class="employee-role">
-           Supervisor
           </div>
          </div>
         </div>
@@ -1952,38 +2037,38 @@
        <h4 class="employee-section-title">Team Members</h4>
        <div class="employee-grid">
         <div class="employee-card">
-         <div class="employee-image"><img src="employee1.png" alt="Rajesh Kumar" onerror="this.src=''; this.alt='RK'; this.style.background='linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           RK
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Rajesh Kumar
           </div>
-          <div class="employee-role">
-           Senior Associate
-          </div>
          </div>
         </div>
         <div class="employee-card">
-         <div class="employee-image"><img src="employee2.png" alt="Priya Sharma" onerror="this.src=''; this.alt='PS'; this.style.background='linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           PS
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Priya Sharma
           </div>
-          <div class="employee-role">
-           Customer Support
-          </div>
          </div>
         </div>
         <div class="employee-card">
-         <div class="employee-image"><img src="employee3.png" alt="Anil Reddy" onerror="this.src=''; this.alt='AR'; this.style.background='linear-gradient(135deg, #16a085 0%, #1abc9c 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           AR
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Anil Reddy
-          </div>
-          <div class="employee-role">
-           Operations Manager
           </div>
          </div>
         </div>
@@ -1992,38 +2077,38 @@
       <div class="employee-section">
        <div class="employee-grid">
         <div class="employee-card">
-         <div class="employee-image"><img src="employee4.png" alt="Sanjay Patel" onerror="this.src=''; this.alt='SP'; this.style.background='linear-gradient(135deg, #f39c12 0%, #e67e22 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           SP
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Sanjay Patel
           </div>
-          <div class="employee-role">
-           Branch Manager
-          </div>
          </div>
         </div>
         <div class="employee-card">
-         <div class="employee-image"><img src="employee5.png" alt="Meena Singh" onerror="this.src=''; this.alt='MS'; this.style.background='linear-gradient(135deg, #e91e63 0%, #c2185b 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           MS
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Meena Singh
           </div>
-          <div class="employee-role">
-           Financial Advisor
-          </div>
          </div>
         </div>
         <div class="employee-card">
-         <div class="employee-image"><img src="employee6.png" alt="Vijay Krishna" onerror="this.src=''; this.alt='VK'; this.style.background='linear-gradient(135deg, #2ecc71 0%, #27ae60 100%)'; this.style.display='flex'; this.style.alignItems='center'; this.style.justifyContent='center'; this.style.color='#fff'; this.style.fontSize='1.5rem'; this.style.fontWeight='700';">
+         <div class="employee-image">
+          <div class="employee-avatar">
+           VK
+          </div>
          </div>
          <div class="employee-info">
           <div class="employee-name">
            Vijay Krishna
-          </div>
-          <div class="employee-role">
-           Technical Support
           </div>
          </div>
         </div>
@@ -2070,7 +2155,7 @@
       <div class="lucky-draw-terms">
        <h4><i class="bi bi-exclamation-circle-fill"></i> Terms &amp; Conditions</h4>
        <ul>
-        <li>Program starts from 1st November 2025</li>
+        <li>Program already started - Join Now!</li>
         <li>Minimum total Transactions worth Rs. 1,00,000 between 1st - 31st required</li>
         <li>Transactions above Rs. 5L = 2 entries</li>
         <li>Transactions above Rs. 10L = 3 entries</li>
@@ -2221,28 +2306,28 @@
      <p class="hero-subtitle" id="hero-subtitle">Fast, Trusted &amp; Secure Digital Financial Services</p>
      <div class="services-grid" id="services">
       <div class="service-card">
-       <div class="service-circle" onclick="showServiceDetails('credit-card')"><span class="service-icon">💳</span>
+       <div class="service-circle" onclick="showServiceDetails('credit-card')"><span class="service-icon"><i class="bi bi-credit-card-2-front-fill"></i></span>
         <div class="service-name">
          Credit Card Payments
         </div>
        </div>
       </div>
       <div class="service-card">
-       <div class="service-circle" onclick="showServiceDetails('money-transfer')"><span class="service-icon">🔄</span>
+       <div class="service-circle" onclick="showServiceDetails('money-transfer')"><span class="service-icon"><i class="bi bi-arrow-left-right"></i></span>
         <div class="service-name">
          Money Transfer
         </div>
        </div>
       </div>
       <div class="service-card">
-       <div class="service-circle" onclick="showServiceDetails('cash-withdrawal')"><span class="service-icon">🏦</span>
+       <div class="service-circle" onclick="showServiceDetails('cash-withdrawal')"><span class="service-icon"><i class="bi bi-cash-stack"></i></span>
         <div class="service-name">
          Cash Withdrawal
         </div>
        </div>
       </div>
       <div class="service-card">
-       <div class="service-circle" onclick="showServiceDetails('instant-transactions')"><span class="service-icon">⚡</span>
+       <div class="service-circle" onclick="showServiceDetails('instant-transactions')"><span class="service-icon"><i class="bi bi-lightning-charge-fill"></i></span>
         <div class="service-name">
          Instant Transactions
         </div>
@@ -2338,11 +2423,11 @@
      <div class="review-card">
       <div class="review-header">
        <div class="review-avatar">
-        P
+        D
        </div>
        <div class="review-info">
         <div class="review-name">
-         Priya Sharma
+         Divya Dabbaru
         </div>
         <div class="review-stars"><i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i> <i class="bi bi-star-fill"></i>
         </div>
@@ -2756,5 +2841,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a933f9000043b7f',t:'MTc2NDkzNDYxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a9805de63e2c195',t:'MTc2NDk4NDY3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
