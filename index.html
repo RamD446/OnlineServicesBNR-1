@@ -1159,30 +1159,32 @@
     }
 
     .branches-header-container {
-      text-align: left;
-      margin-bottom: 1.5rem;
+      text-align: center;
+      margin-bottom: 2.5rem;
       padding-left: 0;
     }
 
     .branches-header-content {
       display: inline-block;
-      text-align: left;
+      text-align: center;
     }
 
     .section-title {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       font-weight: 800;
-      margin-bottom: 0.3rem;
-      text-align: left;
+      margin-bottom: 0.65rem;
+      text-align: center;
       color: #2c3e50;
+      line-height: 1.2;
     }
 
     .section-subtitle {
-      font-size: 0.95rem;
-      opacity: 0.7;
+      font-size: 1.1rem;
+      opacity: 0.75;
       margin-bottom: 0;
-      text-align: left;
-      color: #7f8c8d;
+      text-align: center;
+      color: #555555;
+      font-weight: 500;
     }
 
     .services-badges {
@@ -1214,31 +1216,42 @@
       border: 1px solid #e8e8e8;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
       padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
     }
 
     .branch-card-header {
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .branch-header-content {
+      width: 100%;
     }
 
     .branch-name {
       font-size: 1.8rem;
       font-weight: 800;
       color: #2c3e50;
-      margin-bottom: 0.5rem;
-    }
-
-    .branch-divider {
-      border: none;
-      border-top: 1px solid #e8e8e8;
-      margin: 0 0 0.75rem 0;
+      margin-bottom: 0.65rem;
+      line-height: 1.2;
     }
 
     .branch-location {
-      font-size: 0.8rem;
-      color: #7f8c8d;
-      line-height: 1.5;
-      margin: 0 0 1rem 0;
-      opacity: 0.9;
+      font-size: 0.85rem;
+      color: #555555;
+      line-height: 1.6;
+      margin: 0;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .branch-location i {
+      color: #3498db;
+      font-size: 1rem;
+      margin-top: 0.1rem;
+      flex-shrink: 0;
     }
 
     .branch-image {
@@ -1700,20 +1713,20 @@
       }
 
       .branch-card-header {
-        margin-bottom: 0.85rem;
+        margin-bottom: 1rem;
       }
 
       .branch-name {
         font-size: 1.5rem;
       }
 
-      .branch-divider {
-        margin-bottom: 0.65rem;
+      .branch-location {
+        font-size: 0.8rem;
+        margin-bottom: 0;
       }
 
-      .branch-location {
-        font-size: 0.75rem;
-        margin-bottom: 0.85rem;
+      .branch-location i {
+        font-size: 0.9rem;
       }
 
       .branch-image {
@@ -1903,12 +1916,13 @@
       }
 
       .section-title {
-        font-size: 1.5rem;
-        text-align: left;
+        font-size: 1.75rem;
+        text-align: center;
       }
 
       .section-subtitle {
-        text-align: left;
+        text-align: center;
+        font-size: 0.95rem;
       }
 
       .service-badge {
@@ -1921,8 +1935,11 @@
       }
 
       .branch-location {
-        font-size: 0.72rem;
-        margin-bottom: 0.8rem;
+        font-size: 0.75rem;
+      }
+
+      .branch-location i {
+        font-size: 0.85rem;
       }
 
       .branch-image {
@@ -2339,9 +2356,10 @@
     <div class="branches-grid">
      <div class="branch-card">
       <div class="branch-card-header">
-       <h3 class="branch-name">Miyapur</h3>
-       <hr class="branch-divider">
-       <p class="branch-location">2nd Lane, Indra Reddy Allwyn Colony, Miyapur Cross Road, Miyapur, Hyderabad - 500049</p>
+       <div class="branch-header-content">
+        <h3 class="branch-name">Miyapur</h3>
+        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> 2nd Lane, Indra Reddy Allwyn Colony, Miyapur Cross Road, Miyapur, Hyderabad - 500049</p>
+       </div>
       </div>
       <div class="branch-image"><img src="MiyapurBranch.png" alt="Miyapur Branch" onerror="this.src=''; this.style.display='none';">
       </div>
@@ -2350,9 +2368,10 @@
      </div>
      <div class="branch-card">
       <div class="branch-card-header">
-       <h3 class="branch-name">Lingampally</h3>
-       <hr class="branch-divider">
-       <p class="branch-location">Opp. to Gulmohar Park Colony, Anand Nagar, Lingampally, Hyderabad - 500019</p>
+       <div class="branch-header-content">
+        <h3 class="branch-name">Lingampally</h3>
+        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> Opp. to Gulmohar Park Colony, Anand Nagar, Lingampally, Hyderabad - 500019</p>
+       </div>
       </div>
       <div class="branch-image"><img src="LingampallyBranch.png" alt="Lingampally Branch" onerror="this.src=''; this.style.display='none';">
       </div>
@@ -2361,9 +2380,10 @@
      </div>
      <div class="branch-card">
       <div class="branch-card-header">
-       <h3 class="branch-name">Patancheru</h3>
-       <hr class="branch-divider">
-       <p class="branch-location">921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</p>
+       <div class="branch-header-content">
+        <h3 class="branch-name">Patancheru</h3>
+        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> 921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</p>
+       </div>
       </div>
       <div class="branch-image"><img src="PatancheruBranch.png" alt="Patancheru Branch" onerror="this.src=''; this.style.display='none';">
       </div>
@@ -2372,9 +2392,10 @@
      </div>
      <div class="branch-card">
       <div class="branch-card-header">
-       <h3 class="branch-name">Majidbanda</h3>
-       <hr class="branch-divider">
-       <p class="branch-location">1-59/12/K, M.S.S Nilayam, Beside GHMC Community Hall Lane, Masjidbanda, Hyderabad - 500084</p>
+       <div class="branch-header-content">
+        <h3 class="branch-name">Majidbanda</h3>
+        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> 1-59/12/K, M.S.S Nilayam, Beside GHMC Community Hall Lane, Masjidbanda, Hyderabad - 500084</p>
+       </div>
       </div>
       <div class="branch-image"><img src="MajidbandaBranch.png" alt="Majidbanda Branch" onerror="this.src=''; this.style.display='none';">
       </div>
@@ -2383,9 +2404,10 @@
      </div>
      <div class="branch-card">
       <div class="branch-card-header">
-       <h3 class="branch-name">Kondapur</h3>
-       <hr class="branch-divider">
-       <p class="branch-location">4-1338/A, First Floor, Raja Rajeshwara Nagar, Kondapur, Hyderabad - 500084</p>
+       <div class="branch-header-content">
+        <h3 class="branch-name">Kondapur</h3>
+        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> 4-1338/A, First Floor, Raja Rajeshwara Nagar, Kondapur, Hyderabad - 500084</p>
+       </div>
       </div>
       <div class="branch-image"><img src="KondapurBranch.png" alt="Kondapur Branch" onerror="this.src=''; this.style.display='none';">
       </div>
@@ -2834,5 +2856,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9aa1f684f1206091',t:'MTc2NTA4ODkwNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9aa21104772d3b7f',t:'MTc2NTA4OTk5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
