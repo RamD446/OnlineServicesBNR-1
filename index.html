@@ -62,6 +62,55 @@
       min-height: 100%;
     }
 
+    /* Top Info Bar */
+    .top-info-bar {
+      width: 100%;
+      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+      padding: 0.5rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .top-bar-left i {
+      color: #FFD700;
+      font-size: 0.9rem;
+    }
+
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
     /* Modern Compact Header */
     header {
       width: 100%;
@@ -1582,6 +1631,25 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
+      .top-info-bar {
+        padding: 0.45rem 4%;
+        font-size: 0.7rem;
+      }
+
+      .top-bar-left i {
+        font-size: 0.8rem;
+      }
+
+      .top-bar-right {
+        gap: 0.6rem;
+      }
+
+      .social-link {
+        width: 26px;
+        height: 26px;
+        font-size: 0.85rem;
+      }
+
       .desktop-nav {
         display: none;
       }
@@ -1921,6 +1989,29 @@
     }
 
     @media (max-width: 480px) {
+      .top-info-bar {
+        padding: 0.4rem 3%;
+        font-size: 0.65rem;
+      }
+
+      .top-bar-left {
+        gap: 0.4rem;
+      }
+
+      .top-bar-left i {
+        font-size: 0.75rem;
+      }
+
+      .top-bar-right {
+        gap: 0.5rem;
+      }
+
+      .social-link {
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+      }
+
       header {
         padding: 0.4rem 3%;
       }
@@ -2135,7 +2226,13 @@
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
  <body>
-  <div class="wrapper"><!-- Alert Container -->
+  <div class="wrapper"><!-- Top Info Bar -->
+   <div class="top-info-bar">
+    <div class="top-bar-left"><i class="bi bi-clock-fill"></i> <span id="current-datetime">Loading...</span>
+    </div>
+    <div class="top-bar-right"><a href="https://www.instagram.com/bnronlineservices457/" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Instagram"> <i class="bi bi-instagram"></i> </a> <a href="https://www.facebook.com/share/171TetxZNA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Facebook"> <i class="bi bi-facebook"></i> </a>
+    </div>
+   </div><!-- Alert Container -->
    <div class="alert-container" id="alert-container"></div><!-- Service Description Modal - Bootstrap Style -->
    <div class="service-modal" id="service-modal">
     <div class="modal-content">
@@ -2343,55 +2440,7 @@
       </ul>
      </div>
      <div class="lucky-draw-live">
-      <p>Lucky Draw will be LIVE on Instagram - <a href="https://www.instagram.com/teambnr457" target="_blank" rel="noopener noreferrer">@TEAMBNR457</a></p>
-     </div>
-     <div class="lucky-draw-branches">
-      <h4><i class="bi bi-telephone-fill"></i> Branch Contact Details</h4>
-      <div class="branch-contact-item">
-       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Miyapur</span>
-       </div>
-       <div class="branch-contact-phone">
-        9281 457 454
-       </div>
-      </div>
-      <div class="branch-contact-item">
-       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Lingampally</span>
-       </div>
-       <div class="branch-contact-phone">
-        9281 457 458
-       </div>
-      </div>
-      <div class="branch-contact-item">
-       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Patancheru</span>
-       </div>
-       <div class="branch-contact-phone">
-        90 457 457 89
-       </div>
-      </div>
-      <div class="branch-contact-item">
-       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Kondapur</span>
-       </div>
-       <div class="branch-contact-phone">
-        90 457 457 83
-       </div>
-      </div>
-      <div class="branch-contact-item">
-       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Masjid Banda</span>
-       </div>
-       <div class="branch-contact-phone">
-        9090 848 457
-       </div>
-      </div>
-      <div class="branch-contact-item">
-       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Ameenpur</span>
-       </div>
-       <div class="branch-contact-phone">
-        9888 467 457
-       </div>
-      </div>
-     </div>
-     <div class="lucky-draw-footer">
-      <p>Thank you for being a part of the BNR Family</p>
+      <p>Lucky Draw will be LIVE on Facebook - <a href="https://www.facebook.com/share/171TetxZNA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Follow Us</a></p>
      </div>
     </div>
    </section><!-- Branches Section -->
@@ -2594,7 +2643,7 @@
      </div><!-- Supervisor 2 -->
      <div class="employee-card employee-supervisor">
       <div class="employee-role-badge">
-       ����� Supervisor
+       ��������� Supervisor
       </div>
       <div class="employee-image"><img src="Naga Gopi.png" alt="Naga Gopi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
        <div class="employee-avatar">
@@ -3099,6 +3148,31 @@
         window.open(`tel:${phoneNumber}`, '_blank');
       }, 500);
     }
+
+    // Update Date and Time
+    function updateDateTime() {
+      const now = new Date();
+      const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      
+      const dayName = days[now.getDay()];
+      const day = now.getDate();
+      const month = months[now.getMonth()];
+      const year = now.getFullYear();
+      
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      
+      const dateTimeString = `${dayName}, ${day} ${month} ${year} | ${hours}:${minutes} ${ampm}`;
+      document.getElementById('current-datetime').textContent = dateTimeString;
+    }
+
+    // Update immediately and then every second
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b40fe2330d36eef',t:'MTc2Njc1NjQ1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b415df0b27284d1',t:'MTc2Njc2MDM3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
