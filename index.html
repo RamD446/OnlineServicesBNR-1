@@ -568,121 +568,98 @@
       }
     }
 
-    /* Lucky Draw Modal */
-    .lucky-draw-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: 3500;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-      overflow-y: auto;
-    }
-
-    .lucky-draw-modal.active {
+    /* Bootstrap Alert Styles */
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #dee2e6;
+      background: #f8f9fa;
     }
 
-    .lucky-draw-content {
-      background: #ffffff;
-      border-radius: 12px;
-      max-width: 650px;
-      width: 90%;
-      position: relative;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      animation: modalSlideIn 0.3s ease;
-      overflow: hidden;
-      margin: auto;
+    .modal-header-content {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1;
     }
 
-    .employee-modal-content {
-      max-width: 850px;
-      width: 92%;
-    }
-
-    .lucky-draw-header {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-      padding: 0.5rem 0.75rem;
-      text-align: center;
-      position: relative;
-      border-bottom: 2px solid #FF8C00;
-    }
-
-    .employee-modal-header {
-      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-      border-bottom: 2px solid #FF8C00;
-    }
-
-    .lucky-draw-close {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-      background: rgba(0, 0, 0, 0.3);
-      border: none;
-      font-size: 1.2rem;
-      cursor: pointer;
-      color: #ffffff;
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      width: 26px;
-      height: 26px;
+    .modal-icon {
+      font-size: 2rem;
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s ease;
+      flex-shrink: 0;
     }
 
-    .lucky-draw-close:hover {
-      background: rgba(0, 0, 0, 0.5);
-      transform: scale(1.1);
-    }
-
-    .lucky-draw-icon {
-      font-size: 0.75rem;
-      margin-bottom: 0.15rem;
-      animation: rotate 4s linear infinite;
-    }
-
-    .lucky-draw-title {
-      font-size: 0.85rem;
-      font-weight: 800;
-      color: #000000;
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2c3e50;
+      line-height: 1.2;
       margin: 0;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
     }
 
-    .employee-modal-title {
-      color: #000000;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 1.75rem;
+      cursor: pointer;
+      color: #6c757d;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+      line-height: 1;
     }
 
-    .lucky-draw-subtitle {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #333333;
-      margin: 0.15rem 0 0;
+    .modal-close:hover {
+      background: #e9ecef;
+      color: #2c3e50;
     }
 
-    .employee-modal-subtitle {
-      color: #333333;
-    }
-
-    .lucky-draw-body {
-      padding: 1.75rem 1.75rem;
-      max-height: 55vh;
+    .modal-body {
+      padding: 1.5rem 1.25rem;
+      max-height: 400px;
       overflow-y: auto;
     }
 
-    .employee-modal-body {
-      padding: 1.25rem 1rem;
-      max-height: 60vh;
+    .modal-body-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
+    .modal-body-title i {
+      color: #3498db;
+      font-size: 1.2rem;
+    }
+
+    .modal-description {
+      color: #6c757d;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      white-space: pre-line;
+    }
+
+    .modal-footer {
+      display: none;
+    }
+
+    /* Lucky Draw Section Styles */
     .lucky-draw-announcement {
       background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
       padding: 1rem;
@@ -696,7 +673,7 @@
       font-size: 1.05rem;
       font-weight: 700;
       color: #1565C0;
-      margin: 0 0 0.5rem;
+      margin: 0;
     }
 
     .lucky-draw-prizes {
@@ -869,6 +846,7 @@
       padding: 1rem;
       text-align: center;
       border-top: 3px solid #66BB6A;
+      border-radius: 8px;
     }
 
     .lucky-draw-footer p {
@@ -878,208 +856,7 @@
       color: #1B5E20;
     }
 
-    @media (max-width: 768px) {
-      .lucky-draw-content {
-        margin: 1rem auto;
-      }
-
-      .lucky-draw-header {
-        padding: 1.25rem;
-      }
-
-      .lucky-draw-icon {
-        font-size: 2.5rem;
-      }
-
-      .lucky-draw-title {
-        font-size: 1.5rem;
-      }
-
-      .lucky-draw-subtitle {
-        font-size: 1rem;
-      }
-
-      .lucky-draw-body {
-        padding: 1.5rem 1rem;
-      }
-
-      .lucky-draw-announcement h3 {
-        font-size: 1.1rem;
-      }
-
-      .prize-item {
-        font-size: 0.95rem;
-        padding: 0.65rem;
-      }
-
-      .prize-amount {
-        font-size: 1.05rem;
-      }
-
-      .lucky-draw-terms h4,
-      .lucky-draw-branches h4 {
-        font-size: 1rem;
-      }
-
-      .lucky-draw-terms li {
-        font-size: 0.9rem;
-      }
-
-      .branch-contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
-      }
-
-      .branch-contact-phone {
-        font-size: 0.9rem;
-      }
-    }
-
-    .modal-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid #dee2e6;
-      background: #f8f9fa;
-    }
-
-    .modal-header-content {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex: 1;
-    }
-
-    .modal-icon {
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
-      border-radius: 8px;
-      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .modal-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #2c3e50;
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    .modal-close {
-      background: none;
-      border: none;
-      font-size: 1.75rem;
-      cursor: pointer;
-      color: #6c757d;
-      padding: 0;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      transition: all 0.2s ease;
-      line-height: 1;
-    }
-
-    .modal-close:hover {
-      background: #e9ecef;
-      color: #2c3e50;
-    }
-
-    .modal-body {
-      padding: 1.5rem 1.25rem;
-      max-height: 400px;
-      overflow-y: auto;
-    }
-
-    .modal-body-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .modal-body-title i {
-      color: #3498db;
-      font-size: 1.2rem;
-    }
-
-    .modal-description {
-      color: #6c757d;
-      line-height: 1.6;
-      font-size: 0.95rem;
-      margin-bottom: 0;
-      white-space: pre-line;
-    }
-
-    .modal-footer {
-      display: none;
-    }
-
-    /* Lucky Draw Button */
-    .lucky-draw-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.6rem 1.2rem;
-      background: rgba(26, 26, 26, 0.8);
-      color: #FFD700;
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-      animation: pulse 2s infinite;
-      border: 2px solid #1a1a1a;
-      margin-top: 1rem;
-    }
-
-    .lucky-draw-button:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
-      background: rgba(26, 26, 26, 0.9);
-    }
-
-    .lucky-draw-button i:first-child {
-      font-size: 1.1rem;
-      animation: rotate 3s linear infinite;
-    }
-
-    .lucky-draw-button i:last-child {
-      font-size: 0.95rem;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-      }
-      50% {
-        box-shadow: 0 6px 35px rgba(0, 0, 0, 0.5);
-      }
-    }
-
-    @keyframes rotate {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* Employee Modal Styles */
+    /* Service Description Modal - Bootstrap Style */
     .employee-section {
       margin-bottom: 1.25rem;
     }
@@ -2372,105 +2149,6 @@
       <p class="modal-description" id="modal-description"></p>
      </div>
     </div>
-   </div><!-- Lucky Draw Modal -->
-   <div class="lucky-draw-modal" id="lucky-draw-modal">
-    <div class="lucky-draw-content">
-     <div class="lucky-draw-header"><button class="lucky-draw-close" onclick="closeLuckyDrawModal()" aria-label="Close">×</button>
-      <div class="lucky-draw-icon"><i class="bi bi-gift-fill"></i>
-      </div>
-      <h2 class="lucky-draw-title">B.N.R ONLINE SERVICES</h2>
-      <p class="lucky-draw-subtitle">Dear All Customers</p>
-     </div>
-     <div class="lucky-draw-body">
-      <div class="lucky-draw-announcement">
-       <h3>Introducing Our First Ever Cashback Program!</h3>
-      </div>
-      <div class="lucky-draw-prizes">
-       <div class="prize-item">
-        <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>1st Winner</span>
-        </div>
-        <div class="prize-amount">
-         Rs. 7,000/-
-        </div>
-       </div>
-       <div class="prize-item">
-        <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>2nd Winner</span>
-        </div>
-        <div class="prize-amount">
-         Rs. 5,000/-
-        </div>
-       </div>
-       <div class="prize-item">
-        <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>3rd Winner</span>
-        </div>
-        <div class="prize-amount">
-         Rs. 4,000/-
-        </div>
-       </div>
-      </div>
-      <div class="lucky-draw-terms">
-       <h4><i class="bi bi-exclamation-circle-fill"></i> Terms &amp; Conditions</h4>
-       <ul>
-        <li>Program already started - Join Now!</li>
-        <li>Minimum total Transactions worth Rs. 1,00,000 between 1st - 31st required</li>
-        <li>Transactions above Rs. 5L = 2 entries</li>
-        <li>Transactions above Rs. 10L = 3 entries</li>
-        <li>Refer a friend = 1 extra for the referrer</li>
-       </ul>
-      </div>
-      <div class="lucky-draw-live">
-       <p>Lucky Draw will be LIVE on Instagram - <a href="https://www.instagram.com/teambnr457" target="_blank" rel="noopener noreferrer">@TEAMBNR457</a></p>
-      </div>
-      <div class="lucky-draw-branches">
-       <h4><i class="bi bi-telephone-fill"></i> Branch Contact Details</h4>
-       <div class="branch-contact-item">
-        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Miyapur</span>
-        </div>
-        <div class="branch-contact-phone">
-         9281 457 454
-        </div>
-       </div>
-       <div class="branch-contact-item">
-        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Lingampally</span>
-        </div>
-        <div class="branch-contact-phone">
-         9281 457 458
-        </div>
-       </div>
-       <div class="branch-contact-item">
-        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Patancheru</span>
-        </div>
-        <div class="branch-contact-phone">
-         90 457 457 89
-        </div>
-       </div>
-       <div class="branch-contact-item">
-        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Kondapur</span>
-        </div>
-        <div class="branch-contact-phone">
-         90 457 457 83
-        </div>
-       </div>
-       <div class="branch-contact-item">
-        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Masjid Banda</span>
-        </div>
-        <div class="branch-contact-phone">
-         9090 848 457
-        </div>
-       </div>
-       <div class="branch-contact-item">
-        <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Ameenpur</span>
-        </div>
-        <div class="branch-contact-phone">
-         9888 467 457
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="lucky-draw-footer">
-      <p>Thank you for being a part of the BNR Family</p>
-     </div>
-    </div>
    </div><!-- Mobile Overlay -->
    <div class="mobile-overlay" id="mobile-overlay" onclick="closeMobileMenu()"></div><!-- Mobile Navigation -->
    <nav class="mobile-nav" id="mobile-nav">
@@ -2617,7 +2295,104 @@
         </div>
        </div>
       </div>
-     </div><button class="lucky-draw-button" id="lucky-draw-button" onclick="openLuckyDrawModal()"> <i class="bi bi-gift-fill"></i> <span id="lucky-draw-text">Monthly Lucky Draw - Participate Now!</span> <i class="bi bi-arrow-right-circle-fill"></i> </button>
+     </div>
+    </div>
+   </section><!-- Lucky Draw Section -->
+   <section class="branches-section" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+    <div class="branches-header-container">
+     <div class="branches-header-content">
+      <h2 class="section-title">Monthly Lucky Draw</h2>
+      <p class="section-subtitle">Dear All Customers - Join Our First Ever Cashback Program!</p>
+     </div>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
+     <div class="lucky-draw-announcement">
+      <h3>Introducing Our First Ever Cashback Program!</h3>
+     </div>
+     <div class="lucky-draw-prizes">
+      <div class="prize-item">
+       <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>1st Winner</span>
+       </div>
+       <div class="prize-amount">
+        Rs. 7,000/-
+       </div>
+      </div>
+      <div class="prize-item">
+       <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>2nd Winner</span>
+       </div>
+       <div class="prize-amount">
+        Rs. 5,000/-
+       </div>
+      </div>
+      <div class="prize-item">
+       <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>3rd Winner</span>
+       </div>
+       <div class="prize-amount">
+        Rs. 4,000/-
+       </div>
+      </div>
+     </div>
+     <div class="lucky-draw-terms">
+      <h4><i class="bi bi-exclamation-circle-fill"></i> Terms &amp; Conditions</h4>
+      <ul>
+       <li>Program already started - Join Now!</li>
+       <li>Minimum total Transactions worth Rs. 1,00,000 between 1st - 31st required</li>
+       <li>Transactions above Rs. 5L = 2 entries</li>
+       <li>Transactions above Rs. 10L = 3 entries</li>
+       <li>Refer a friend = 1 extra for the referrer</li>
+      </ul>
+     </div>
+     <div class="lucky-draw-live">
+      <p>Lucky Draw will be LIVE on Instagram - <a href="https://www.instagram.com/teambnr457" target="_blank" rel="noopener noreferrer">@TEAMBNR457</a></p>
+     </div>
+     <div class="lucky-draw-branches">
+      <h4><i class="bi bi-telephone-fill"></i> Branch Contact Details</h4>
+      <div class="branch-contact-item">
+       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Miyapur</span>
+       </div>
+       <div class="branch-contact-phone">
+        9281 457 454
+       </div>
+      </div>
+      <div class="branch-contact-item">
+       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Lingampally</span>
+       </div>
+       <div class="branch-contact-phone">
+        9281 457 458
+       </div>
+      </div>
+      <div class="branch-contact-item">
+       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Patancheru</span>
+       </div>
+       <div class="branch-contact-phone">
+        90 457 457 89
+       </div>
+      </div>
+      <div class="branch-contact-item">
+       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Kondapur</span>
+       </div>
+       <div class="branch-contact-phone">
+        90 457 457 83
+       </div>
+      </div>
+      <div class="branch-contact-item">
+       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Masjid Banda</span>
+       </div>
+       <div class="branch-contact-phone">
+        9090 848 457
+       </div>
+      </div>
+      <div class="branch-contact-item">
+       <div class="branch-contact-name"><i class="bi bi-geo-alt-fill"></i> <span>Ameenpur</span>
+       </div>
+       <div class="branch-contact-phone">
+        9888 467 457
+       </div>
+      </div>
+     </div>
+     <div class="lucky-draw-footer">
+      <p>Thank you for being a part of the BNR Family</p>
+     </div>
     </div>
    </section><!-- Branches Section -->
    <section class="branches-section" id="branches">
@@ -2819,7 +2594,7 @@
      </div><!-- Supervisor 2 -->
      <div class="employee-card employee-supervisor">
       <div class="employee-role-badge">
-       ⭐ Supervisor
+       ����� Supervisor
       </div>
       <div class="employee-image"><img src="Naga Gopi.png" alt="Naga Gopi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
        <div class="employee-avatar">
@@ -3125,23 +2900,6 @@
       }
     });
 
-    function openLuckyDrawModal() {
-      document.getElementById('lucky-draw-modal').classList.add('active');
-    }
-
-    function closeLuckyDrawModal() {
-      document.getElementById('lucky-draw-modal').classList.remove('active');
-    }
-
-    // Close lucky draw modal when clicking outside
-    document.getElementById('lucky-draw-modal').addEventListener('click', function(e) {
-      if (e.target === this) {
-        closeLuckyDrawModal();
-      }
-    });
-
-
-
     async function onConfigChange(config) {
       const customFont = config.font_family || defaultConfig.font_family;
       const baseFontStack = 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif';
@@ -3342,5 +3100,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b40f828726347d5',t:'MTc2Njc1NjIxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b40fe2330d36eef',t:'MTc2Njc1NjQ1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
