@@ -1175,44 +1175,46 @@
 
     @media (max-width: 768px) {
       .employee-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.6rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
       }
 
       .employee-card {
-        padding: 0.7rem;
+        padding: 1rem;
       }
 
       .employee-avatar {
-        width: 55px;
-        height: 55px;
-        font-size: 1.1rem;
-      }
-
-      .founder-grid .employee-avatar {
         width: 70px;
         height: 70px;
         font-size: 1.5rem;
       }
 
+      .founder-grid {
+        grid-template-columns: 1fr;
+        max-width: 280px;
+        margin: 0 auto;
+      }
+
+      .founder-grid .employee-avatar {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem;
+      }
+
       .employee-image {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.65rem;
       }
 
       .employee-name {
-        font-size: 0.8rem;
-      }
-
-      .founder-grid {
-        max-width: 100%;
+        font-size: 0.9rem;
       }
 
       .founder-grid .employee-name {
-        font-size: 1rem;
+        font-size: 1.3rem;
       }
 
       .employee-section-title {
-        font-size: 0.85rem;
+        font-size: 1rem;
       }
 
       .employee-modal-body {
@@ -1222,11 +1224,36 @@
 
     @media (max-width: 480px) {
       .employee-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
+      }
+
+      .employee-card {
+        padding: 0.85rem;
+      }
+
+      .employee-avatar {
+        width: 65px;
+        height: 65px;
+        font-size: 1.4rem;
+      }
+
+      .founder-grid .employee-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8rem;
+      }
+
+      .employee-name {
+        font-size: 0.85rem;
+      }
+
+      .founder-grid .employee-name {
+        font-size: 1.2rem;
       }
 
       .employee-section-title {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
     }
 
@@ -2770,24 +2797,24 @@
       <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
        <div class="employee-image">
         <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 70px; height: 70px; font-size: 1.5rem;">
-         PR
+         PK
         </div>
        </div>
        <div class="employee-info">
         <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Preveen
+         Praveen Kumar
         </div>
        </div>
       </div>
       <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
        <div class="employee-image">
         <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 70px; height: 70px; font-size: 1.5rem;">
-         PV
+         PK
         </div>
        </div>
        <div class="employee-info">
         <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Paven
+         Pavan Kishore
         </div>
        </div>
       </div>
@@ -3206,5 +3233,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b3e3553d1ab3b7f',t:'MTc2NjcyNzI1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b3e495c84c76e29',t:'MTc2NjcyODA3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
