@@ -1019,6 +1019,7 @@
       line-height: 1.6;
       font-size: 0.95rem;
       margin-bottom: 0;
+      white-space: pre-line;
     }
 
     .modal-footer {
@@ -2283,8 +2284,6 @@
       </div><button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
      </div>
      <div class="modal-body">
-      <div class="modal-body-title"><i class="bi bi-info-circle-fill"></i> <span>Coming Soon Information</span>
-      </div>
       <p class="modal-description" id="modal-description"></p>
      </div>
     </div>
@@ -2750,7 +2749,7 @@
         <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> Plot # 35, KGR Colony, Ameenpur, Sangareddy Dist, Hyderabad, Telangana - 502032</p>
        </div>
       </div>
-      <div class="branch-image"><img src="AmeenpurBranch.png" alt="Ameenpur Branch" onerror="this.src=''; this.style.display='none';">
+      <div class="branch-image"><img src="MiyapurBranch.png" alt="Ameenpur Branch" onerror="this.src=''; this.style.display='none';">
       </div>
       <div class="branch-contact-row"><a href="tel:9888467457" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9888467457</span> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9888467457</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Plot+35+KGR+Colony+Ameenpur+Sangareddy+Telangana+502032" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
       </div>
@@ -2906,96 +2905,66 @@
       copyright_text: '© 2024 BNR Online Services. All rights reserved.'
     };
 
-    // Service descriptions data for 5 individual services
+    // Service descriptions data for 4 individual services
     const serviceData = {
       'credit-card': {
         icon: '<i class="bi bi-credit-card-2-front-fill" style="color: #ffffff; font-size: 3rem;"></i>',
         title: 'Credit Card Payments',
-        description: 'Fast and secure credit card payment processing for all major credit and debit cards. Accept payments instantly with our reliable and encrypted payment gateway.',
+        description: 'Hello Customer\'s\n\nWe at B.N.R ONLINE SERVICES, Giving a Smooth and Reliable Credit Card Bill payments experience for our customers. Our Service charges are very less when compared with others. Also, For your convenance we are located in 6 areas in Hyderabad and about to expand. Our Associates are well trained about the process and expertise to guide you.\n\nRegards\nTEAM BNR',
         features: [
-          'All major credit cards supported (Visa, Mastercard, Amex, RuPay)',
-          'Real-time payment processing',
-          'Secure encrypted transactions with fraud protection',
-          'Instant payment confirmation',
-          'Transaction history and detailed receipts',
-          'EMI and installment options available',
-          'Zero hidden charges',
-          '24/7 payment support'
-        ]
-      },
-      'liquid-cash': {
-        icon: '<i class="bi bi-cash-stack" style="color: #ffffff; font-size: 3rem;"></i>',
-        title: 'Liquid Cash',
-        description: 'Immediate liquid cash solutions for your urgent financial needs. Get instant cash with minimal documentation and flexible repayment terms at competitive rates.',
-        features: [
-          'Instant liquid cash availability',
-          'Minimal documentation required',
-          'Flexible repayment terms',
-          'Competitive interest rates',
-          'High cash limits available',
-          'Quick approval process',
-          'Transparent terms and conditions',
-          'Trusted and secure service'
-        ]
-      },
-      'digital-cash': {
-        icon: '<i class="bi bi-phone-fill" style="color: #ffffff; font-size: 3rem;"></i>',
-        title: 'Digital Cash',
-        description: 'Modern digital cash solutions for seamless online transactions. Transfer money digitally through mobile wallets, UPI, and other digital payment platforms instantly.',
-        features: [
-          'UPI and wallet transfers supported',
-          'Instant digital money transfers',
-          'QR code payments',
-          'Contactless transactions',
-          'Multi-platform support (mobile, web)',
-          'Real-time balance updates',
-          'High security encryption',
-          'Available 24/7/365'
+          'Smooth and reliable credit card bill payments',
+          'Very low service charges compared to others',
+          '6 convenient locations across Hyderabad',
+          'Well-trained and expert associates',
+          'Professional guidance throughout the process',
+          'Quick and easy payment process',
+          'Available from 9:30 AM to 9:30 PM Everyday',
+          'Trusted by thousands of customers'
         ]
       },
       'money-transfer': {
         icon: '<i class="bi bi-arrow-left-right" style="color: #ffffff; font-size: 3rem;"></i>',
         title: 'Money Transfer',
-        description: 'Fast and reliable domestic and international money transfer services. Send money securely to any bank account or branch with instant confirmation and competitive rates.',
+        description: 'Hello Customer\'s\n\nWe at B.N.R ONLINE SERVICES, will serve you with Money Transfer services with (DMT - DOMESTIC MONEY TRANSFER) to fulfill your financial needs.\n\nRegards\nTEAM BNR',
         features: [
-          'Domestic and international transfers',
-          'Instant bank account transfers',
-          'Real-time transaction processing',
-          'Competitive exchange rates',
+          'DMT - Domestic Money Transfer services',
+          'Fast and reliable transfers',
+          'Secure money transfer to any bank account',
           'Instant transfer confirmation',
-          'Transaction tracking available',
-          'Secure encrypted transfers',
-          '24/7 transfer support'
+          'Competitive transfer rates',
+          'Available at all 6 branches',
+          'Expert assistance available',
+          'Open 9:30 AM to 9:30 PM Everyday'
         ]
       },
       'cash-withdrawal': {
         icon: '<i class="bi bi-bank2" style="color: #ffffff; font-size: 3rem;"></i>',
         title: 'Cash Withdrawal',
-        description: 'Convenient cash withdrawal services at all our branches. Access your money instantly with high withdrawal limits and multiple denomination options for your convenience.',
+        description: 'Hello Customer\'s\n\nWe at B.N.R ONLINE SERVICES, will serve you with Cash Withdrawal services through (AEPS - Aadhaar Enabled Payment System) for all banks. So, No need to visit the banks and no Rush about bank timings. We are available from 9:30AM to 9:30PM Everyday to serve you better.\n\nRegards\nTEAM BNR',
         features: [
-          'Instant cash withdrawal at any branch',
-          'High daily withdrawal limits',
-          'Multiple denomination options',
-          'Minimal documentation required',
-          'Quick processing time',
-          'Safe and secure process',
-          'All branches available',
+          'AEPS - Aadhaar Enabled Payment System',
+          'Cash withdrawal for all banks',
+          'No need to visit the bank',
+          'No rush about bank timings',
+          'Available 9:30 AM to 9:30 PM Everyday',
+          'Quick and easy process',
+          'Safe and secure transactions',
           'Friendly staff assistance'
         ]
       },
       'instant-transactions': {
         icon: '<i class="bi bi-lightning-charge-fill" style="color: #ffffff; font-size: 3rem;"></i>',
         title: 'Instant Transactions',
-        description: 'Lightning-fast instant transaction services for all your urgent financial needs. Complete transactions in seconds with our advanced processing system.',
+        description: 'Hello Customer\'s\n\nWe at B.N.R ONLINE SERVICES, will make sure about Instant Transactions with 99% (HSR- High Success Ratio). Even in 1% of failure Scenario\'s We are there to help you to resolve the issue as soon as possible.\n\nRegards\nTEAM BNR',
         features: [
+          '99% HSR - High Success Ratio',
           'Real-time instant processing',
-          'Available 24/7/365',
-          'Zero waiting time',
-          'All major banks supported',
-          'Secure encrypted transactions',
-          'Instant confirmation SMS',
-          'No hidden charges',
-          'Quick and reliable service'
+          'Immediate transaction confirmation',
+          'Quick issue resolution in case of failures',
+          'Available at all branches',
+          'Expert technical support',
+          'Open 9:30 AM to 9:30 PM Everyday',
+          'Reliable and trusted service'
         ]
       }
     };
@@ -3257,5 +3226,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b3dfed5c3056e29',t:'MTc2NjcyNTAyNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b3e1670000e3e1c',t:'MTc2NjcyNTk5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
