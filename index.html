@@ -1105,156 +1105,185 @@
       font-size: 1rem;
     }
 
-    .employee-grid {
+    /* Unified Employee Grid */
+    .employee-unified-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-    }
-
-    .founder-grid {
-      grid-template-columns: 1fr;
-      max-width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     .employee-card {
-      background: #f8f9fa;
-      border-radius: 10px;
-      padding: 0.9rem;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem 1.25rem;
       text-align: center;
       transition: all 0.3s ease;
       border: 3px solid #3498db;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
     }
 
     .employee-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-      border-color: #3498db;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
+    /* Role Badge */
+    .employee-role-badge {
+      position: absolute;
+      top: 0.75rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+      color: #ffffff;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+    }
+
+    .employee-founder .employee-role-badge {
+      background: linear-gradient(135deg, #FFA000 0%, #FF6F00 100%);
+      box-shadow: 0 2px 8px rgba(255, 160, 0, 0.4);
+    }
+
+    .employee-supervisor .employee-role-badge {
+      background: linear-gradient(135deg, #0288D1 0%, #01579B 100%);
+      box-shadow: 0 2px 8px rgba(2, 136, 209, 0.4);
+    }
+
+    .employee-member .employee-role-badge {
+      background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%);
+      box-shadow: 0 2px 8px rgba(142, 36, 170, 0.4);
+    }
+
+    /* Employee Image */
     .employee-image {
       display: flex;
       justify-content: center;
-      margin-bottom: 0.65rem;
+      align-items: center;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+
+    .employee-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      background: #f8f9fa;
     }
 
     .employee-avatar {
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
       background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 3rem;
       font-weight: 800;
       color: #ffffff;
-      box-shadow: 0 3px 12px rgba(52, 152, 219, 0.3);
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
     }
 
-    .founder-grid .employee-avatar {
-      width: 85px;
-      height: 85px;
-      font-size: 1.8rem;
+    .employee-founder .employee-avatar {
+      background: linear-gradient(135deg, #FFA000 0%, #FF6F00 100%);
+      box-shadow: 0 4px 15px rgba(255, 160, 0, 0.5);
     }
 
+    .employee-supervisor .employee-avatar {
+      background: linear-gradient(135deg, #0288D1 0%, #01579B 100%);
+      box-shadow: 0 4px 15px rgba(2, 136, 209, 0.4);
+    }
+
+    .employee-member .employee-avatar {
+      background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%);
+      box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
+    }
+
+    /* Employee Info */
     .employee-info {
       display: flex;
       flex-direction: column;
-      gap: 0.35rem;
+      gap: 0.25rem;
+      width: 100%;
     }
 
     .employee-name {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       font-weight: 700;
       color: #2c3e50;
     }
 
-    .founder-grid .employee-name {
-      font-size: 1.15rem;
+    @media (max-width: 768px) {
+      .employee-unified-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .employee-card {
+        padding: 1.25rem 1rem;
+      }
+
+      .employee-role-badge {
+        font-size: 0.65rem;
+        padding: 0.25rem 0.75rem;
+      }
+
+      .employee-img,
+      .employee-avatar {
+        width: 140px;
+        height: 140px;
+      }
+
+      .employee-avatar {
+        font-size: 2.5rem;
+      }
+
+      .employee-name {
+        font-size: 1rem;
+      }
     }
 
-    @media (max-width: 768px) {
-      .employee-grid {
+    @media (max-width: 480px) {
+      .employee-unified-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
       }
 
       .employee-card {
-        padding: 1rem;
+        padding: 1rem 0.85rem;
+      }
+
+      .employee-role-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.65rem;
+        top: 0.5rem;
+      }
+
+      .employee-img,
+      .employee-avatar {
+        width: 120px;
+        height: 120px;
       }
 
       .employee-avatar {
-        width: 70px;
-        height: 70px;
-        font-size: 1.5rem;
-      }
-
-      .founder-grid {
-        grid-template-columns: 1fr;
-        max-width: 280px;
-        margin: 0 auto;
-      }
-
-      .founder-grid .employee-avatar {
-        width: 90px;
-        height: 90px;
         font-size: 2rem;
-      }
-
-      .employee-image {
-        margin-bottom: 0.65rem;
       }
 
       .employee-name {
         font-size: 0.9rem;
-      }
-
-      .founder-grid .employee-name {
-        font-size: 1.3rem;
-      }
-
-      .employee-section-title {
-        font-size: 1rem;
-      }
-
-      .employee-modal-body {
-        padding: 1rem 0.85rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .employee-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.85rem;
-      }
-
-      .employee-card {
-        padding: 0.85rem;
-      }
-
-      .employee-avatar {
-        width: 65px;
-        height: 65px;
-        font-size: 1.4rem;
-      }
-
-      .founder-grid .employee-avatar {
-        width: 80px;
-        height: 80px;
-        font-size: 1.8rem;
-      }
-
-      .employee-name {
-        font-size: 0.85rem;
-      }
-
-      .founder-grid .employee-name {
-        font-size: 1.2rem;
-      }
-
-      .employee-section-title {
-        font-size: 0.95rem;
       }
     }
 
@@ -1312,8 +1341,8 @@
 
     .branches-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
       max-width: 1400px;
       margin: 0 auto;
     }
@@ -1365,7 +1394,7 @@
 
     .branch-image {
       width: 100%;
-      height: 140px;
+      height: 100px;
       overflow: hidden;
       background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
       border-radius: 8px;
@@ -1380,24 +1409,41 @@
 
     .branch-contact-row {
       display: flex;
+      flex-direction: column;
       gap: 0.5rem;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
+    }
+
+    .contact-number-display {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #2c3e50;
+      text-align: center;
+      width: 100%;
+    }
+
+    .contact-icons-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      padding: 0.45rem 0.7rem;
-      border-radius: 20px;
+      justify-content: center;
+      padding: 0.5rem;
+      border-radius: 50%;
       background: #ffffff;
       border: 1px solid #e9ecef;
       cursor: pointer;
       text-decoration: none;
       color: #ffffff;
       transition: all 0.2s ease;
-      flex: 1;
+      width: 36px;
+      height: 36px;
     }
 
     .contact-item:hover {
@@ -1415,22 +1461,11 @@
 
     .contact-item.direction {
       background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-      flex: 0 0 auto;
-      padding: 0.45rem;
-      width: 30px;
-      height: 30px;
-      justify-content: center;
     }
 
     .contact-item i {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       flex-shrink: 0;
-    }
-
-    .contact-number {
-      font-size: 0.65rem;
-      font-weight: 600;
-      white-space: nowrap;
     }
 
     /* Reviews Section */
@@ -1562,9 +1597,10 @@
 
     .footer-branch-card {
       display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 0.75rem;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.85rem;
       background: rgba(255, 255, 255, 0.05);
       border-radius: 8px;
       transition: all 0.3s ease;
@@ -1575,51 +1611,50 @@
       transform: translateY(-2px);
     }
 
+    .footer-branch-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      flex: 1;
+      min-width: 0;
+    }
+
     .footer-branch-name {
       font-size: 0.85rem;
       font-weight: 700;
       color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .footer-branch-name i {
-      color: #FFD700;
-      font-size: 0.9rem;
+      display: block;
     }
 
     .footer-branch-number {
       font-size: 0.75rem;
       color: #cccccc;
-      margin-left: 1.3rem;
       font-weight: 600;
+      display: block;
     }
 
     .footer-contact-links {
       display: flex;
       gap: 0.5rem;
-      margin-top: 0.25rem;
+      align-items: center;
+      flex-shrink: 0;
     }
 
     .footer-contact-link {
-      flex: 1;
+      width: 36px;
+      height: 36px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.3rem;
-      padding: 0.4rem 0.6rem;
-      border-radius: 6px;
+      border-radius: 50%;
       text-decoration: none;
       color: #ffffff;
-      font-weight: 600;
-      font-size: 0.7rem;
       transition: all 0.3s ease;
     }
 
     .footer-contact-link:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px) scale(1.1);
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
     }
 
     .footer-contact-link.phone {
@@ -1631,7 +1666,7 @@
     }
 
     .footer-contact-link i {
-      font-size: 0.75rem;
+      font-size: 1rem;
     }
 
     /* Row 2: Services - Centered Grid */
@@ -1933,8 +1968,8 @@
       }
 
       .branches-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.85rem;
       }
 
       .reviews-grid {
@@ -1964,31 +1999,30 @@
       }
 
       .branch-image {
-        height: 110px;
+        height: 90px;
         margin-bottom: 0.65rem;
       }
 
       .branch-contact-row {
+        gap: 0.45rem;
+      }
+
+      .contact-number-display {
+        font-size: 0.75rem;
+      }
+
+      .contact-icons-row {
         gap: 0.4rem;
       }
 
       .contact-item {
-        padding: 0.4rem 0.6rem;
-        gap: 0.3rem;
+        width: 32px;
+        height: 32px;
+        padding: 0.45rem;
       }
 
       .contact-item i {
-        font-size: 0.7rem;
-      }
-
-      .contact-number {
-        font-size: 0.6rem;
-      }
-
-      .contact-item.direction {
-        width: 28px;
-        height: 28px;
-        padding: 0.4rem;
+        font-size: 0.8rem;
       }
 
       .review-card {
@@ -2033,14 +2067,16 @@
 
       .footer-branch-card {
         padding: 0.65rem;
+        flex-direction: row;
+        gap: 0.6rem;
+      }
+
+      .footer-branch-info {
+        gap: 0.25rem;
       }
 
       .footer-branch-name {
         font-size: 0.8rem;
-      }
-
-      .footer-branch-name i {
-        font-size: 0.85rem;
       }
 
       .footer-branch-number {
@@ -2052,12 +2088,12 @@
       }
 
       .footer-contact-link {
-        font-size: 0.65rem;
-        padding: 0.35rem 0.5rem;
+        width: 32px;
+        height: 32px;
       }
 
       .footer-contact-link i {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
       }
 
       .footer-services {
@@ -2235,7 +2271,8 @@
       }
 
       .branches-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
       }
 
       .branch-name {
@@ -2251,26 +2288,25 @@
       }
 
       .branch-image {
-        height: 100px;
+        height: 80px;
       }
 
-      .contact-item {
-        padding: 0.4rem 0.55rem;
-        gap: 0.3rem;
-      }
-
-      .contact-item i {
+      .contact-number-display {
         font-size: 0.7rem;
       }
 
-      .contact-number {
-        font-size: 0.58rem;
+      .contact-icons-row {
+        gap: 0.35rem;
       }
 
-      .contact-item.direction {
-        width: 26px;
-        height: 26px;
+      .contact-item {
+        width: 30px;
+        height: 30px;
         padding: 0.4rem;
+      }
+
+      .contact-item i {
+        font-size: 0.75rem;
       }
 
       .footer-branches-grid {
@@ -2279,6 +2315,12 @@
 
       .footer-branch-card {
         padding: 0.6rem;
+        flex-direction: row;
+        gap: 0.55rem;
+      }
+
+      .footer-branch-info {
+        gap: 0.2rem;
       }
 
       .footer-branch-name {
@@ -2287,6 +2329,19 @@
 
       .footer-branch-number {
         font-size: 0.68rem;
+      }
+
+      .footer-contact-links {
+        gap: 0.4rem;
+      }
+
+      .footer-contact-link {
+        width: 30px;
+        height: 30px;
+      }
+
+      .footer-contact-link i {
+        font-size: 0.85rem;
       }
 
       .footer-about p {
@@ -2582,7 +2637,12 @@
       </div>
       <div class="branch-image"><img src="MiyapurBranch.png" alt="Miyapur Branch" onerror="this.src=''; this.style.display='none';">
       </div>
-      <div class="branch-contact-row"><a href="tel:9281457454" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9281457454</span> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9281457454</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-contact-row">
+       <div class="contact-number-display">
+        9281457454
+       </div>
+       <div class="contact-icons-row"><a href="tel:9281457454" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=2nd+Lane+Indra+Reddy+Allwyn+Colony+Miyapur+Cross+Road+Miyapur+Hyderabad+500049" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
       </div>
      </div>
      <div class="branch-card">
@@ -2594,19 +2654,29 @@
       </div>
       <div class="branch-image"><img src="LingampallyBranch.png" alt="Lingampally Branch" onerror="this.src=''; this.style.display='none';">
       </div>
-      <div class="branch-contact-row"><a href="tel:9281457458" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9281457458</span> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9281457458</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-contact-row">
+       <div class="contact-number-display">
+        9281457458
+       </div>
+       <div class="contact-icons-row"><a href="tel:9281457458" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Gulmohar+Park+Colony+Anand+Nagar+Lingampally+Hyderabad+500019" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
       </div>
      </div>
      <div class="branch-card">
       <div class="branch-card-header">
        <div class="branch-header-content">
         <h3 class="branch-name">Patancheru</h3>
-        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> 921-2, Shanthi Nagar Colony, Beside Bajaj Electronics, Patancheru, Sangareddy - 502319</p>
+        <p class="branch-location"><i class="bi bi-geo-alt-fill"></i> BNR Online Services Patancheruvu, Shanthi Nagar, Patancheruvu, Hyderabad, Telangana - 502319</p>
        </div>
       </div>
       <div class="branch-image"><img src="PatancheruBranch.png" alt="Patancheru Branch" onerror="this.src=''; this.style.display='none';">
       </div>
-      <div class="branch-contact-row"><a href="tel:9045745789" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9045745789</span> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9045745789</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=921-2+Shanthi+Nagar+Colony+Bajaj+Electronics+Patancheru+Sangareddy+502319" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-contact-row">
+       <div class="contact-number-display">
+        9045745789
+       </div>
+       <div class="contact-icons-row"><a href="tel:9045745789" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=BNR+Online+Services+Patancheruvu+Shanthi+Nagar+Patancheruvu+Hyderabad+Telangana+502319" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
       </div>
      </div>
      <div class="branch-card">
@@ -2618,7 +2688,12 @@
       </div>
       <div class="branch-image"><img src="MajidbandaBranch.png" alt="Majidbanda Branch" onerror="this.src=''; this.style.display='none';">
       </div>
-      <div class="branch-contact-row"><a href="tel:9090848457" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9090848457</span> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9090848457</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-contact-row">
+       <div class="contact-number-display">
+        9090848457
+       </div>
+       <div class="contact-icons-row"><a href="tel:9090848457" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=1-59/12/K+MSS+Nilayam+GHMC+Community+Hall+Lane+Masjidbanda+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
       </div>
      </div>
      <div class="branch-card">
@@ -2630,7 +2705,12 @@
       </div>
       <div class="branch-image"><img src="KondapurBranch.png" alt="Kondapur Branch" onerror="this.src=''; this.style.display='none';">
       </div>
-      <div class="branch-contact-row"><a href="tel:9045745783" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9045745783</span> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9045745783</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-contact-row">
+       <div class="contact-number-display">
+        9045745783
+       </div>
+       <div class="contact-icons-row"><a href="tel:9045745783" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=4-1338/A+First+Floor+Raja+Rajeshwara+Nagar+Kondapur+Hyderabad+500084" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
       </div>
      </div>
      <div class="branch-card">
@@ -2642,7 +2722,12 @@
       </div>
       <div class="branch-image"><img src="MiyapurBranch.png" alt="Ameenpur Branch" onerror="this.src=''; this.style.display='none';">
       </div>
-      <div class="branch-contact-row"><a href="tel:9888467457" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> <span class="contact-number">9888467457</span> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> <span class="contact-number">9888467457</span> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Plot+35+KGR+Colony+Ameenpur+Sangareddy+Telangana+502032" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+      <div class="branch-contact-row">
+       <div class="contact-number-display">
+        9888467457
+       </div>
+       <div class="contact-icons-row"><a href="tel:9888467457" class="contact-item phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="contact-item whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Plot+35+KGR+Colony+Ameenpur+Sangareddy+Telangana+502032" target="_blank" rel="noopener noreferrer" class="contact-item direction" title="Get Directions"> <i class="bi bi-geo-alt-fill"></i> </a>
+       </div>
       </div>
      </div>
     </div>
@@ -2700,135 +2785,140 @@
    </section><!-- Employees Section -->
    <section class="reviews-section" id="employees" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
     <h2 class="section-title" id="employees-title">Meet Our Team</h2>
-    <p class="section-subtitle">The dedicated people behind our success</p><!-- Founder Section -->
-    <div class="employee-section" style="margin-bottom: 3rem;">
-     <h3 class="employee-section-title" style="text-align: center; font-size: 1.4rem; color: #E65100; margin-bottom: 1.5rem; font-weight: 800;">🏆 Founder</h3>
-     <div class="employee-grid founder-grid" style="max-width: 350px; margin: 0 auto;">
-      <div class="employee-card" style="background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%); border: 3px solid #FFA000; box-shadow: 0 8px 25px rgba(255, 160, 0, 0.3);">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 1.8rem; color: #E65100; font-weight: 800;">
-         Ravi
-        </div>
-        <div style="font-size: 0.9rem; color: #F57C00; font-weight: 600; margin-top: 0.3rem;">
-         Founder &amp; CEO
-        </div>
-       </div>
-       <div class="employee-image"><img src="Ravi.png" alt="Ravi" style="width: 220px; height: 220px; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 15px rgba(255, 160, 0, 0.5); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="width: 220px; height: 220px; font-size: 4rem; background: linear-gradient(135deg, #FFA000 0%, #FF6F00 100%); box-shadow: 0 4px 15px rgba(255, 160, 0, 0.5); display: none; border-radius: 8px;">
-         R
-        </div>
+    <p class="section-subtitle">The dedicated people behind our success</p>
+    <div class="employee-unified-grid"><!-- Founder -->
+     <div class="employee-card employee-founder">
+      <div class="employee-role-badge">
+       🏆 Founder &amp; CEO
+      </div>
+      <div class="employee-image"><img src="Ravi.png" alt="Ravi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        R
        </div>
       </div>
-     </div>
-    </div><!-- Supervisors Section -->
-    <div class="employee-section" style="margin-bottom: 3rem;">
-     <h3 class="employee-section-title" style="text-align: center; font-size: 1.3rem; color: #E65100; margin-bottom: 1.5rem; font-weight: 800;">⭐ Supervisors</h3>
-     <div class="employee-grid" style="max-width: 750px; margin: 0 auto; gap: 1.5rem;">
-      <div class="employee-card" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288D1;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 1.1rem; color: #01579B;">
-         Sasi Kiran
-        </div>
-        <div style="font-size: 0.8rem; color: #0277BD; font-weight: 600; margin-top: 0.25rem;">
-         Supervisor
-        </div>
-       </div>
-       <div class="employee-image"><img src="Sasi Kiran.png" alt="Sasi Kiran" style="width: 180px; height: 180px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(52, 152, 219, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #0288D1 0%, #01579B 100%); width: 180px; height: 180px; font-size: 2.5rem; display: none; border-radius: 8px;">
-         SK
-        </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Ravi
        </div>
       </div>
-      <div class="employee-card" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); border: 3px solid #0288D1;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 1.1rem; color: #01579B;">
-         Naga Gopi
-        </div>
-        <div style="font-size: 0.8rem; color: #0277BD; font-weight: 600; margin-top: 0.25rem;">
-         Supervisor
-        </div>
-       </div>
-       <div class="employee-image"><img src="Naga Gopi.png" alt="Naga Gopi" style="width: 180px; height: 180px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(52, 152, 219, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #0288D1 0%, #01579B 100%); width: 180px; height: 180px; font-size: 2.5rem; display: none; border-radius: 8px;">
-         NG
-        </div>
+     </div><!-- Supervisor 1 -->
+     <div class="employee-card employee-supervisor">
+      <div class="employee-role-badge">
+       ⭐ Supervisor
+      </div>
+      <div class="employee-image"><img src="Sasi Kiran.png" alt="Sasi Kiran" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        SK
        </div>
       </div>
-     </div>
-    </div><!-- Team Members Section -->
-    <div class="employee-section" style="margin-bottom: 2rem;">
-     <h3 class="employee-section-title" style="text-align: center; font-size: 1.3rem; color: #E65100; margin-bottom: 1.5rem; font-weight: 800;">👥 Team Members</h3>
-     <div class="employee-grid" style="max-width: 1000px; margin: 0 auto; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;">
-      <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Chandra Kanth
-        </div>
-       </div>
-       <div class="employee-image"><img src="Chandra Kanth.png" alt="Chandra Kanth" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(142, 36, 170, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 150px; height: 150px; font-size: 2rem; display: none; border-radius: 8px;">
-         CK
-        </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Sasi Kiran
        </div>
       </div>
-      <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Sai Chand
-        </div>
-       </div>
-       <div class="employee-image"><img src="Sai Chand.png" alt="Sai Chand" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(142, 36, 170, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 150px; height: 150px; font-size: 2rem; display: none; border-radius: 8px;">
-         SC
-        </div>
+     </div><!-- Supervisor 2 -->
+     <div class="employee-card employee-supervisor">
+      <div class="employee-role-badge">
+       ⭐ Supervisor
+      </div>
+      <div class="employee-image"><img src="Naga Gopi.png" alt="Naga Gopi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        NG
        </div>
       </div>
-      <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Phanindra
-        </div>
-       </div>
-       <div class="employee-image"><img src="Phanindra.png" alt="Phanindra" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(142, 36, 170, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 150px; height: 150px; font-size: 2rem; display: none; border-radius: 8px;">
-         P
-        </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Naga Gopi
        </div>
       </div>
-      <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Praveen Kumar
-        </div>
-       </div>
-       <div class="employee-image"><img src="Praveen Kumar.png" alt="Praveen Kumar" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(142, 36, 170, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 150px; height: 150px; font-size: 2rem; display: none; border-radius: 8px;">
-         PK
-        </div>
+     </div><!-- Team Member 1 -->
+     <div class="employee-card employee-member">
+      <div class="employee-role-badge">
+       👤 Team Member
+      </div>
+      <div class="employee-image"><img src="Chandra Kanth.png" alt="Chandra Kanth" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        CK
        </div>
       </div>
-      <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Pavan Kishore
-        </div>
-       </div>
-       <div class="employee-image"><img src="Pavan Kishore.png" alt="Pavan Kishore" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(142, 36, 170, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 150px; height: 150px; font-size: 2rem; display: none; border-radius: 8px;">
-         PK
-        </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Chandra Kanth
        </div>
       </div>
-      <div class="employee-card" style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); border: 3px solid #8E24AA;">
-       <div class="employee-info">
-        <div class="employee-name" style="font-size: 0.95rem; color: #6A1B9A;">
-         Ameer Basha
-        </div>
+     </div><!-- Team Member 2 -->
+     <div class="employee-card employee-member">
+      <div class="employee-role-badge">
+       👤 Team Member
+      </div>
+      <div class="employee-image"><img src="Sai Chand.png" alt="Sai Chand" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        SC
        </div>
-       <div class="employee-image"><img src="Ameer Basha.png" alt="Ameer Basha" style="width: 150px; height: 150px; border-radius: 8px; object-fit: cover; box-shadow: 0 3px 12px rgba(142, 36, 170, 0.3); background: #ffffff;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="employee-avatar" style="background: linear-gradient(135deg, #8E24AA 0%, #6A1B9A 100%); width: 150px; height: 150px; font-size: 2rem; display: none; border-radius: 8px;">
-         AB
-        </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Sai Chand
+       </div>
+      </div>
+     </div><!-- Team Member 3 -->
+     <div class="employee-card employee-member">
+      <div class="employee-role-badge">
+       👤 Team Member
+      </div>
+      <div class="employee-image"><img src="Phanindra.png" alt="Phanindra" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        P
+       </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Phanindra
+       </div>
+      </div>
+     </div><!-- Team Member 4 -->
+     <div class="employee-card employee-member">
+      <div class="employee-role-badge">
+       👤 Team Member
+      </div>
+      <div class="employee-image"><img src="Praveen Kumar.png" alt="Praveen Kumar" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        PK
+       </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Praveen Kumar
+       </div>
+      </div>
+     </div><!-- Team Member 5 -->
+     <div class="employee-card employee-member">
+      <div class="employee-role-badge">
+       👤 Team Member
+      </div>
+      <div class="employee-image"><img src="Pavan Kishore.png" alt="Pavan Kishore" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        PK
+       </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Pavan Kishore
+       </div>
+      </div>
+     </div><!-- Team Member 6 -->
+     <div class="employee-card employee-member">
+      <div class="employee-role-badge">
+       👤 Team Member
+      </div>
+      <div class="employee-image"><img src="Ameer Basha.png" alt="Ameer Basha" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        AB
+       </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Ameer Basha
        </div>
       </div>
      </div>
@@ -2840,57 +2930,75 @@
       <h3 class="footer-section-title">Contact Information</h3>
       <div class="footer-branches-grid"><!-- Miyapur -->
        <div class="footer-branch-card">
-        <div class="footer-branch-name"><i class="bi bi-geo-alt-fill"></i> <span>Miyapur</span>
+        <div class="footer-branch-info">
+         <div class="footer-branch-name">
+          Miyapur
+         </div>
+         <div class="footer-branch-number">
+          9281457454
+         </div>
         </div>
-        <div class="footer-branch-number">
-         9281457454
-        </div>
-        <div class="footer-contact-links"><a href="tel:9281457454" class="footer-contact-link phone"> <i class="bi bi-telephone-fill"></i> <span>Call</span> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp"> <i class="bi bi-whatsapp"></i> <span>WhatsApp</span> </a>
+        <div class="footer-contact-links"><a href="tel:9281457454" class="footer-contact-link phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
         </div>
        </div><!-- Lingampally -->
        <div class="footer-branch-card">
-        <div class="footer-branch-name"><i class="bi bi-geo-alt-fill"></i> <span>Lingampally</span>
+        <div class="footer-branch-info">
+         <div class="footer-branch-name">
+          Lingampally
+         </div>
+         <div class="footer-branch-number">
+          9281457458
+         </div>
         </div>
-        <div class="footer-branch-number">
-         9281457458
-        </div>
-        <div class="footer-contact-links"><a href="tel:9281457458" class="footer-contact-link phone"> <i class="bi bi-telephone-fill"></i> <span>Call</span> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp"> <i class="bi bi-whatsapp"></i> <span>WhatsApp</span> </a>
+        <div class="footer-contact-links"><a href="tel:9281457458" class="footer-contact-link phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
         </div>
        </div><!-- Patancheru -->
        <div class="footer-branch-card">
-        <div class="footer-branch-name"><i class="bi bi-geo-alt-fill"></i> <span>Patancheru</span>
+        <div class="footer-branch-info">
+         <div class="footer-branch-name">
+          Patancheru
+         </div>
+         <div class="footer-branch-number">
+          9045745789
+         </div>
         </div>
-        <div class="footer-branch-number">
-         9045745789
-        </div>
-        <div class="footer-contact-links"><a href="tel:9045745789" class="footer-contact-link phone"> <i class="bi bi-telephone-fill"></i> <span>Call</span> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp"> <i class="bi bi-whatsapp"></i> <span>WhatsApp</span> </a>
+        <div class="footer-contact-links"><a href="tel:9045745789" class="footer-contact-link phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
         </div>
        </div><!-- Kondapur -->
        <div class="footer-branch-card">
-        <div class="footer-branch-name"><i class="bi bi-geo-alt-fill"></i> <span>Kondapur</span>
+        <div class="footer-branch-info">
+         <div class="footer-branch-name">
+          Kondapur
+         </div>
+         <div class="footer-branch-number">
+          9045745783
+         </div>
         </div>
-        <div class="footer-branch-number">
-         9045745783
-        </div>
-        <div class="footer-contact-links"><a href="tel:9045745783" class="footer-contact-link phone"> <i class="bi bi-telephone-fill"></i> <span>Call</span> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp"> <i class="bi bi-whatsapp"></i> <span>WhatsApp</span> </a>
+        <div class="footer-contact-links"><a href="tel:9045745783" class="footer-contact-link phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
         </div>
        </div><!-- Majidbanda -->
        <div class="footer-branch-card">
-        <div class="footer-branch-name"><i class="bi bi-geo-alt-fill"></i> <span>Majidbanda</span>
+        <div class="footer-branch-info">
+         <div class="footer-branch-name">
+          Majidbanda
+         </div>
+         <div class="footer-branch-number">
+          9090848457
+         </div>
         </div>
-        <div class="footer-branch-number">
-         9090848457
-        </div>
-        <div class="footer-contact-links"><a href="tel:9090848457" class="footer-contact-link phone"> <i class="bi bi-telephone-fill"></i> <span>Call</span> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp"> <i class="bi bi-whatsapp"></i> <span>WhatsApp</span> </a>
+        <div class="footer-contact-links"><a href="tel:9090848457" class="footer-contact-link phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
         </div>
        </div><!-- Ameenpur -->
        <div class="footer-branch-card">
-        <div class="footer-branch-name"><i class="bi bi-geo-alt-fill"></i> <span>Ameenpur</span>
+        <div class="footer-branch-info">
+         <div class="footer-branch-name">
+          Ameenpur
+         </div>
+         <div class="footer-branch-number">
+          9888467457
+         </div>
         </div>
-        <div class="footer-branch-number">
-         9888467457
-        </div>
-        <div class="footer-contact-links"><a href="tel:9888467457" class="footer-contact-link phone"> <i class="bi bi-telephone-fill"></i> <span>Call</span> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp"> <i class="bi bi-whatsapp"></i> <span>WhatsApp</span> </a>
+        <div class="footer-contact-links"><a href="tel:9888467457" class="footer-contact-link phone" title="Call"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="footer-contact-link whatsapp" title="WhatsApp"> <i class="bi bi-whatsapp"></i> </a>
         </div>
        </div>
       </div>
@@ -3234,5 +3342,5 @@
       }, 500);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b3fb140951847d5',t:'MTc2Njc0MjgyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b40f828726347d5',t:'MTc2Njc1NjIxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
