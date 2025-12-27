@@ -932,13 +932,17 @@
       font-size: 1rem;
     }
 
-    /* Employee Grid - 2 Row Layout */
+    /* Employee Grid - Desktop: All Leadership in One Row, Mobile: Separate Rows */
     .employee-leadership-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto 1.5rem;
+    }
+    
+    .employee-supervisor-row {
+      display: none;
     }
 
     .employee-team-row {
@@ -1062,7 +1066,24 @@
     }
 
     @media (max-width: 768px) {
-      .employee-leadership-row,
+      .employee-leadership-row {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        max-width: 300px;
+      }
+
+      .employee-leadership-row .employee-supervisor {
+        display: none;
+      }
+
+      .employee-supervisor-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+      }
+
       .employee-team-row {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 1.25rem;
@@ -1093,7 +1114,24 @@
     }
 
     @media (max-width: 480px) {
-      .employee-leadership-row,
+      .employee-leadership-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 280px;
+      }
+
+      .employee-leadership-row .employee-supervisor {
+        display: none;
+      }
+
+      .employee-supervisor-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+      }
+
       .employee-team-row {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -2620,8 +2658,8 @@
    </section><!-- Employees Section -->
    <section class="reviews-section" id="employees" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
     <h2 class="section-title" id="employees-title">Meet Our Team</h2>
-    <p class="section-subtitle">The dedicated people behind our success</p><!-- Leadership Row (Founder + Supervisors) -->
-    <div class="employee-leadership-row"><!-- Founder -->
+    <p class="section-subtitle">The dedicated people behind our success</p><!-- Founder Row -->
+    <div class="employee-leadership-row">
      <div class="employee-card employee-founder">
       <div class="employee-role-badge">
        🏆 Founder
@@ -2637,6 +2675,38 @@
        </div>
       </div>
      </div><!-- Supervisor 1 -->
+     <div class="employee-card employee-supervisor">
+      <div class="employee-role-badge">
+       ⭐ Supervisor
+      </div>
+      <div class="employee-image"><img src="Sasi Kiran.png" alt="Sasi Kiran" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        SK
+       </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Sasi Kiran
+       </div>
+      </div>
+     </div><!-- Supervisor 2 -->
+     <div class="employee-card employee-supervisor">
+      <div class="employee-role-badge">
+       ⭐ Supervisor
+      </div>
+      <div class="employee-image"><img src="Naga Gopi.png" alt="Naga Gopi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="employee-avatar">
+        NG
+       </div>
+      </div>
+      <div class="employee-info">
+       <div class="employee-name">
+        Naga Gopi
+       </div>
+      </div>
+     </div>
+    </div><!-- Supervisors Row -->
+    <div class="employee-supervisor-row"><!-- Supervisor 1 -->
      <div class="employee-card employee-supervisor">
       <div class="employee-role-badge">
        ⭐ Supervisor
@@ -3187,5 +3257,5 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b4568a2515b257c',t:'MTc2NjgwMjc2MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b458c597413257c',t:'MTc2NjgwNDIyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
