@@ -343,6 +343,11 @@
       box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
     }
 
+    .mobile-action-btn.direction {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      box-shadow: 0 2px 8px rgba(240, 147, 251, 0.3);
+    }
+
     .mobile-overlay {
       display: none;
       position: fixed;
@@ -770,11 +775,11 @@
     }
 
     .lucky-draw-terms {
-      background: #ffffff;
+      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
-      border: 2px solid #e0e0e0;
+      border: 2px solid #81C784;
     }
 
     .lucky-draw-terms h4 {
@@ -2223,7 +2228,17 @@
      <div class="mobile-nav-section">
       <div class="mobile-section-title">
        Quick Menu
-      </div>
+      </div><!-- Lucky Draw Button -->
+      <div class="mobile-branch-item" onclick="navigateTo('lucky-draw')" style="cursor: pointer; background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 2px solid #FFD700;">
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name" style="color: #E65100;"><i class="bi bi-trophy-fill" style="color: #FFD700;"></i> Lucky Draw
+        </div>
+       </div>
+       <div class="mobile-branch-actions">
+        <div style="width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #FFB74D 0%, #FF9800 100%);"><i class="bi bi-arrow-right" style="color: #ffffff; font-size: 0.85rem;"></i>
+        </div>
+       </div>
+      </div><!-- Our Employees Button -->
       <div class="mobile-branch-item" onclick="navigateTo('employees')" style="cursor: pointer;">
        <div class="mobile-branch-info">
         <div class="mobile-branch-name"><i class="bi bi-people-fill"></i> Our Employees
@@ -2231,6 +2246,16 @@
        </div>
        <div class="mobile-branch-actions">
         <div style="width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);"><i class="bi bi-arrow-right" style="color: #ffffff; font-size: 0.85rem;"></i>
+        </div>
+       </div>
+      </div><!-- Contact Information Button -->
+      <div class="mobile-branch-item" onclick="navigateTo('contact')" style="cursor: pointer; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border: 2px solid #4CAF50;">
+       <div class="mobile-branch-info">
+        <div class="mobile-branch-name" style="color: #1B5E20;"><i class="bi bi-telephone-fill" style="color: #4CAF50;"></i> Contact Information
+        </div>
+       </div>
+       <div class="mobile-branch-actions">
+        <div style="width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #66BB6A 0%, #4CAF50 100%);"><i class="bi bi-arrow-right" style="color: #ffffff; font-size: 0.85rem;"></i>
         </div>
        </div>
       </div>
@@ -2247,7 +2272,7 @@
          9281457454
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9281457454" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9281457454" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457454" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=BNR+Online+Services+Miyapur+Cross+Road+Indra+Reddy+Allwyn+Colony+Hafeezpet+Miyapur+Telangana" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div><!-- Lingampally Branch -->
       <div class="mobile-branch-item">
@@ -2258,7 +2283,7 @@
          9281457458
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9281457458" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9281457458" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919281457458" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=BNR+Online+Services+Lingampally+Anand+Nagar+Serilingampalle+Telangana" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div><!-- Patancheru Branch -->
       <div class="mobile-branch-item">
@@ -2269,7 +2294,7 @@
          9045745789
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9045745789" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9045745789" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745789" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=BNR+Online+Services+Patancheruvu+Shanthi+Nagar+Patancheruvu+Hyderabad+Telangana+502319" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div><!-- Ameenpur Branch -->
       <div class="mobile-branch-item">
@@ -2280,7 +2305,7 @@
          9888467457
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9888467457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9888467457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Plot+35+KGR+Colony+Ameenpur+Sangareddy+Telangana+502032" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div><!-- Kondapur Branch -->
       <div class="mobile-branch-item">
@@ -2291,7 +2316,7 @@
          9045745783
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9045745783" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9045745783" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919045745783" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=BNR+Online+Service+Kondapur+Puroo+Cold+Pressed+Oils+Raja+Rajeshwara+Nagar+Kondapur+Telangana" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div><!-- Masjid Banda Branch -->
       <div class="mobile-branch-item">
@@ -2302,7 +2327,7 @@
          9090848457
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9090848457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9090848457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919090848457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=BNR+Online+Service+Masjid+Banda+Sai+Pruthvi+Enclave+Masjid+Banda+Hyderabad+Telangana" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div><!-- Ameenpur Branch -->
       <div class="mobile-branch-item">
@@ -2313,7 +2338,7 @@
          9888467457
         </div>
        </div>
-       <div class="mobile-branch-actions"><a href="tel:9888467457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a>
+       <div class="mobile-branch-actions"><a href="tel:9888467457" class="mobile-action-btn" onclick="closeMobileMenu()"> <i class="bi bi-telephone-fill"></i> </a> <a href="https://wa.me/919888467457" target="_blank" rel="noopener noreferrer" class="mobile-action-btn whatsapp" onclick="closeMobileMenu()"> <i class="bi bi-whatsapp"></i> </a> <a href="https://www.google.com/maps/search/?api=1&amp;query=Plot+35+KGR+Colony+Ameenpur+Sangareddy+Telangana+502032" target="_blank" rel="noopener noreferrer" class="mobile-action-btn direction" onclick="closeMobileMenu()"> <i class="bi bi-geo-alt-fill"></i> </a>
        </div>
       </div>
      </div>
@@ -2371,7 +2396,7 @@
      </div>
     </div>
    </section><!-- Lucky Draw Section -->
-   <section class="branches-section" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+   <section class="branches-section" id="lucky-draw" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
     <div class="branches-header-container">
      <div class="branches-header-content">
       <h2 class="section-title">Monthly Lucky Draw</h2>
@@ -3138,5 +3163,5 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b484363829b3e1c',t:'MTc2NjgzMjY5Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b48507ea4ba47d5',t:'MTc2NjgzMzIyOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
