@@ -932,12 +932,20 @@
       font-size: 1rem;
     }
 
-    /* Unified Employee Grid */
-    .employee-unified-grid {
+    /* Employee Grid - 2 Row Layout */
+    .employee-leadership-row {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
-      max-width: 1200px;
+      max-width: 900px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .employee-team-row {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -1054,7 +1062,8 @@
     }
 
     @media (max-width: 768px) {
-      .employee-unified-grid {
+      .employee-leadership-row,
+      .employee-team-row {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 1.25rem;
       }
@@ -1084,7 +1093,8 @@
     }
 
     @media (max-width: 480px) {
-      .employee-unified-grid {
+      .employee-leadership-row,
+      .employee-team-row {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
       }
@@ -2231,7 +2241,7 @@
    <div class="top-info-bar">
     <div class="top-bar-left"><i class="bi bi-clock-fill"></i> <span id="current-datetime">Loading...</span>
     </div>
-    <div class="top-bar-right"><a href="https://www.instagram.com/bnronlineservices457/" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Instagram"> <i class="bi bi-instagram"></i> </a> <a href="https://www.facebook.com/share/171TetxZNA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Facebook"> <i class="bi bi-facebook"></i> </a>
+    <div class="top-bar-right"><a href="https://www.instagram.com/teambnr457?igsh=MWk4eG5kaXg3bGVqeA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Instagram"> <i class="bi bi-instagram"></i> </a> <a href="https://www.facebook.com/share/171TetxZNA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="social-link" title="Follow us on Facebook"> <i class="bi bi-facebook"></i> </a>
     </div>
    </div><!-- Alert Container -->
    <div class="alert-container" id="alert-container"></div><!-- Service Description Modal - Bootstrap Style -->
@@ -2610,11 +2620,11 @@
    </section><!-- Employees Section -->
    <section class="reviews-section" id="employees" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
     <h2 class="section-title" id="employees-title">Meet Our Team</h2>
-    <p class="section-subtitle">The dedicated people behind our success</p>
-    <div class="employee-unified-grid"><!-- Founder -->
+    <p class="section-subtitle">The dedicated people behind our success</p><!-- Leadership Row (Founder + Supervisors) -->
+    <div class="employee-leadership-row"><!-- Founder -->
      <div class="employee-card employee-founder">
       <div class="employee-role-badge">
-       🏆 Founder &amp; CEO
+       🏆 Founder
       </div>
       <div class="employee-image"><img src="Ravi.png" alt="Ravi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
        <div class="employee-avatar">
@@ -2644,7 +2654,7 @@
      </div><!-- Supervisor 2 -->
      <div class="employee-card employee-supervisor">
       <div class="employee-role-badge">
-       ��������� Supervisor
+       ⭐ Supervisor
       </div>
       <div class="employee-image"><img src="Naga Gopi.png" alt="Naga Gopi" class="employee-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
        <div class="employee-avatar">
@@ -2656,7 +2666,9 @@
         Naga Gopi
        </div>
       </div>
-     </div><!-- Team Member 1 -->
+     </div>
+    </div><!-- Team Members Row -->
+    <div class="employee-team-row"><!-- Team Member 1 -->
      <div class="employee-card employee-member">
       <div class="employee-role-badge">
        👤 Team Member
@@ -3175,5 +3187,5 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b4167843745b155',t:'MTc2Njc2MDc3MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b453dab72d36eef',t:'MTc2NjgwMTAwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
