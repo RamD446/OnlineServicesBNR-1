@@ -724,27 +724,29 @@
 
     /* Lucky Draw Section Styles */
     .lucky-draw-announcement {
-      background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+      background: linear-gradient(135deg, #FFF59D 0%, #FFD54F 100%);
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
-      border-left: 4px solid #2196F3;
+      border-left: 4px solid #F57F17;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(245, 127, 23, 0.2);
     }
 
     .lucky-draw-announcement h3 {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #1565C0;
+      color: #E65100;
       margin: 0;
     }
 
     .lucky-draw-prizes {
-      background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+      background: linear-gradient(135deg, #FFF8E1 0%, #FFE082 100%);
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
-      border: 2px solid #FFB74D;
+      border: 2px solid #FFA000;
+      box-shadow: 0 4px 12px rgba(255, 160, 0, 0.2);
     }
 
     .prize-item {
@@ -753,7 +755,7 @@
       justify-content: space-between;
       padding: 0.6rem;
       margin-bottom: 0.4rem;
-      background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+      background: linear-gradient(135deg, #FFFDE7 0%, #FFF59D 100%);
       border-radius: 6px;
       font-weight: 700;
       font-size: 0.9rem;
@@ -782,17 +784,18 @@
     }
 
     .lucky-draw-terms {
-      background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+      background: linear-gradient(135deg, #FFF8E1 0%, #FFE082 100%);
       padding: 1rem;
       border-radius: 8px;
       margin-bottom: 1rem;
-      border: 2px solid #81C784;
+      border: 2px solid #F57F17;
+      box-shadow: 0 4px 12px rgba(245, 127, 23, 0.2);
     }
 
     .lucky-draw-terms h4 {
       font-size: 0.95rem;
       font-weight: 700;
-      color: #333333;
+      color: #E65100;
       margin: 0 0 0.75rem;
       display: flex;
       align-items: center;
@@ -800,7 +803,7 @@
     }
 
     .lucky-draw-terms h4 i {
-      color: #667eea;
+      color: #F57F17;
     }
 
     .lucky-draw-terms ul {
@@ -813,7 +816,7 @@
       padding: 0.4rem 0;
       padding-left: 1.5rem;
       position: relative;
-      color: #555555;
+      color: #6D4C41;
       line-height: 1.5;
       font-size: 0.85rem;
     }
@@ -822,29 +825,31 @@
       content: "✓";
       position: absolute;
       left: 0;
-      color: #4CAF50;
+      color: #FF6F00;
       font-weight: 700;
       font-size: 0.95rem;
     }
 
     .lucky-draw-live {
-      background: linear-gradient(135deg, #e1bee7 0%, #ce93d8 100%);
+      background: linear-gradient(135deg, #FFD54F 0%, #FFA000 100%);
       padding: 0.85rem;
       border-radius: 8px;
       text-align: center;
       margin-bottom: 1rem;
-      border: 2px solid #AB47BC;
+      border: 2px solid #FF6F00;
+      box-shadow: 0 4px 12px rgba(255, 111, 0, 0.3);
     }
 
     .lucky-draw-live p {
       margin: 0;
       font-weight: 700;
-      color: #4A148C;
+      color: #FFFFFF;
       font-size: 0.9rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
     .lucky-draw-live a {
-      color: #6A1B9A;
+      color: #1A237E;
       text-decoration: none;
       font-weight: 800;
     }
@@ -2402,49 +2407,52 @@
      </div>
     </div>
    </section><!-- Lucky Draw Section -->
-   <section class="branches-section" id="lucky-draw" style="background: linear-gradient(135deg, #fff9e6 0%, #ffe4b3 100%);">
+   <section class="branches-section" id="lucky-draw" style="background: linear-gradient(135deg, #FFF9C4 0%, #FFEB3B 100%);">
     <div class="branches-header-container">
      <div class="branches-header-content">
-      <h2 class="section-title" style="color: #d35400;">Monthly Lucky Draw</h2>
-      <p class="section-subtitle" style="color: #8B0000; font-weight: 800; text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9), -1px -1px 2px rgba(255, 255, 255, 0.7);">Dear All Customers - Join Our First Ever Cashback Program!</p>
+      <h2 class="section-title">🎉 Monthly Lucky Draw 🎉</h2>
+      <p class="section-subtitle" style="font-size: 0.9rem; color: #d32f2f; font-weight: 700;">Dear All Customers - Join Our First Ever Cashback Program!</p>
      </div>
     </div>
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;">
-     <div class="lucky-draw-prizes" style="background: linear-gradient(135deg, #fff5e1 0%, #ffe0b2 100%); border: 2px solid #ff9800;">
-      <div class="prize-item" style="background: linear-gradient(135deg, #fffbf0 0%, #fff4e0 100%);">
-       <div class="prize-label"><i class="bi bi-trophy-fill" style="color: #f39c12;"></i> <span style="color: #d35400;">1st Winner</span>
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem;"><!-- Prize Announcement -->
+     <div class="lucky-draw-announcement">
+      <h3>🏆 Win Amazing Cash Prizes! 🏆</h3>
+     </div><!-- Prize List -->
+     <div class="lucky-draw-prizes">
+      <div class="prize-item">
+       <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>1st Prize</span>
        </div>
-       <div class="prize-amount" style="color: #27ae60;">
-        Rs. 7,000/-
-       </div>
-      </div>
-      <div class="prize-item" style="background: linear-gradient(135deg, #fffbf0 0%, #fff4e0 100%);">
-       <div class="prize-label"><i class="bi bi-trophy-fill" style="color: #f39c12;"></i> <span style="color: #d35400;">2nd Winner</span>
-       </div>
-       <div class="prize-amount" style="color: #27ae60;">
-        Rs. 5,000/-
+       <div class="prize-amount">
+        ₹7,000/-
        </div>
       </div>
-      <div class="prize-item" style="background: linear-gradient(135deg, #fffbf0 0%, #fff4e0 100%);">
-       <div class="prize-label"><i class="bi bi-trophy-fill" style="color: #f39c12;"></i> <span style="color: #d35400;">3rd Winner</span>
+      <div class="prize-item">
+       <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>2nd Prize</span>
        </div>
-       <div class="prize-amount" style="color: #27ae60;">
-        Rs. 4,000/-
+       <div class="prize-amount">
+        ₹5,000/-
        </div>
       </div>
-     </div>
-     <div class="lucky-draw-terms" style="background: linear-gradient(135deg, #fef9e7 0%, #fdebd0 100%); border: 2px solid #f39c12;">
-      <h4 style="color: #d35400;"><i class="bi bi-exclamation-circle-fill" style="color: #e67e22;"></i> Terms &amp; Conditions</h4>
+      <div class="prize-item">
+       <div class="prize-label"><i class="bi bi-trophy-fill"></i> <span>3rd Prize</span>
+       </div>
+       <div class="prize-amount">
+        ₹4,000/-
+       </div>
+      </div>
+     </div><!-- Terms & Conditions -->
+     <div class="lucky-draw-terms">
+      <h4><i class="bi bi-list-check"></i> Terms &amp; Conditions</h4>
       <ul>
-       <li style="color: #7d6608;">Program already started - Join Now!</li>
-       <li style="color: #7d6608;">Minimum total Transactions worth Rs. 1,00,000 between 1st - 31st required</li>
-       <li style="color: #7d6608;">Transactions above Rs. 5L = 2 entries</li>
-       <li style="color: #7d6608;">Transactions above Rs. 10L = 3 entries</li>
-       <li style="color: #7d6608;">Refer a friend = 1 extra for the referrer</li>
+       <li>Program already started - Join Now!</li>
+       <li>Minimum total Transactions worth Rs. 1,00,000 between 1st - 31st required</li>
+       <li>Transactions above Rs. 5L = 2 entries</li>
+       <li>Transactions above Rs. 10L = 3 entries</li>
+       <li>Refer a friend = 1 extra entry for the referrer</li>
       </ul>
-     </div>
-     <div class="lucky-draw-live" style="background: linear-gradient(135deg, #ffe8cc 0%, #ffd699 100%); border: 2px solid #ff9800;">
-      <p style="color: #d35400;">Lucky Draw will be LIVE on Facebook - <a href="https://www.facebook.com/share/171TetxZNA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" style="color: #e67e22; font-weight: 900;">Follow Us</a></p>
+     </div><!-- Live Draw -->
+     <div class="lucky-draw-live">
+      <p>📺 Lucky Draw will be LIVE on Facebook - <a href="https://www.facebook.com/share/171TetxZNA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Follow Us Now! 👈</a></p>
      </div>
     </div>
    </section><!-- Branches Section -->
@@ -2626,7 +2634,7 @@
         Ravi
        </div>
        <div class="employee-role">
-        ���� Founder
+        👑 Founder
        </div>
       </div>
      </div><!-- Row 2: 2 Supervisors -->
@@ -3166,5 +3174,5 @@
     updateDateTime();
     setInterval(updateDateTime, 1000);
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b718d6f4615c195',t:'MTc2NzI2NTY0MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b7f00f7a21c3b7f',t:'MTc2NzQwNjY4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
